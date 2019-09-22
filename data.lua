@@ -145,7 +145,7 @@ derpyArtilleryRecipe.ingredients = {
 	{"steel-plate", 60},
 	{"stone-brick", 60},
 	{"iron-gear-wheel", 40},
-	{"electronic-circuit", 20},
+	{"electronic-circuit", 60},
 	--{"water-barrel", 12},
 	{type="fluid", name="water", amount=600}
 }
