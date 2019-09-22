@@ -16,6 +16,12 @@ end
 
 
 
+local derpyArtilleryGun = table.deepcopy(data.raw["gun"]["artillery-wagon-cannon"])
+
+derpyArtilleryGun.name = "derpy-artillery-gun"
+derpyArtilleryGun.flags = {}
+
+data:extend{derpyArtilleryGun}
 
 
 local derpyArtilleryEntity = table.deepcopy(data.raw["artillery-turret"]["artillery-turret"])
