@@ -19,7 +19,7 @@ end
 local derpyArtilleryAmmo = table.deepcopy(data.raw["ammo"]["artillery-shell"])
 
 derpyArtilleryAmmo.name = "derpy-artillery-ammo"
---derpyArtilleryAmmo.ammo_type.action.action_delivery.projectile="derpy-artillery-projectile"
+derpyArtilleryAmmo.ammo_type.action.action_delivery.projectile="derpy-artillery-projectile"
 
 data:extend{derpyArtilleryAmmo}
 log(serpent.block(derpyArtilleryAmmo))
@@ -33,11 +33,11 @@ derpyArtilleryShellRecipe.result = "derpy-artillery-ammo"
 data:extend{derpyArtilleryShellRecipe}
 
 
---[[
 local derpyArtilleryProjectile = table.deepcopy(data.raw["artillery-projectile"]["artillery-projectile"])
 
 derpyArtilleryProjectile.name = "derpy-artillery-projectile"
 --local action = derpyArtilleryProjectile.action.action_delivery.target_effects.action
+--[[
 local action = derpyArtilleryProjectile.action
 action.action_delivery.target_effects = {
 	{
@@ -50,10 +50,31 @@ action.action_delivery.target_effects = {
 	}
 }
 action.radius = 50
+]]--
+
+local target_effects = derpyArtilleryProjectile.action.action_delivery.target_effects
+
+log("for k,v in pairs(target_effects) do")
+log(#target_effects)
+for k,v in pairs(target_effects) do
+	log(k)
+	log(serpent.block(v))
+end
 
 data:extend{derpyArtilleryProjectile}
-log(serpent.block(action))
-]]--
+--log("serpent.block(derpyArtilleryProjectile.action)")
+--log(serpent.block(derpyArtilleryProjectile.action))
+
+--log("serpent.block(derpyArtilleryProjectile.action.action_delivery)")
+--log(serpent.block(derpyArtilleryProjectile.action.action_delivery))
+
+--log("serpent.block(derpyArtilleryProjectile.action.action_delivery.target_effects)")
+--log(serpent.block(derpyArtilleryProjectile.action.action_delivery.target_effects))
+
+--log("serpent.block(derpyArtilleryProjectile.action.action_delivery.target_effects.action)")
+--log(serpent.block(derpyArtilleryProjectile.action.action_delivery.target_effects.action))
+
+
 
 local derpyArtilleryGun = table.deepcopy(data.raw["gun"]["artillery-wagon-cannon"])
 
