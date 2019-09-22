@@ -20,6 +20,7 @@ local derpyArtilleryAmmo = table.deepcopy(data.raw["ammo"]["artillery-shell"])
 
 derpyArtilleryAmmo.name = "derpy-artillery-ammo"
 derpyArtilleryAmmo.ammo_type.action.action_delivery.projectile="derpy-artillery-projectile"
+derpyArtilleryAmmo.stack_size = 20
 
 data:extend{derpyArtilleryAmmo}
 log(serpent.block(derpyArtilleryAmmo))
@@ -106,8 +107,8 @@ derpyArtilleryGun.flags = {}
 
 local attack_parameters = derpyArtilleryGun.attack_parameters
 attack_parameters.cooldown = 200
-attack_parameters.min_range = 3 * 32
-attack_parameters.range = 14 * 32
+attack_parameters.min_range = 4 * 32 -- 1 * 32
+attack_parameters.range = 21 * 32 -- 7 * 32
 attack_parameters.turn_range = 1.0 / 3.0
 attack_parameters.ammo_category = "artillery-shell"
 
@@ -133,6 +134,9 @@ local derpyArtilleryItem = table.deepcopy(data.raw["item"]["artillery-turret"])
 derpyArtilleryItem.name = "derpy-artillery"
 derpyArtilleryItem.place_result = "derpy-artillery"
 derpyArtilleryItem.stack_size = 1
+derpyArtilleryItem.ammo_stack_limit = 20
+derpyArtilleryItem.automated_ammo_count = 10
+derpyArtilleryItem.max_health = 500
 
 data:extend{derpyArtilleryItem}
 
