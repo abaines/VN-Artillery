@@ -40,9 +40,18 @@ data:extend{derpyArtilleryItem}
 
 local derpyArtilleryRecipe = table.deepcopy(data.raw.recipe["artillery-turret"])
 
-derpyArtilleryRecipe.enabled = true
 derpyArtilleryRecipe.name = "derpy-artillery"
 derpyArtilleryRecipe.result = "derpy-artillery"
 
 data:extend{derpyArtilleryRecipe}
+
+
+local military2 = data.raw.technology["military-2"]
+
+local unlock = {
+	type = "unlock-recipe",
+	recipe = "derpy-artillery"
+}
+
+table.insert(military2.effects,unlock)
 
