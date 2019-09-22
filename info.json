@@ -1,0 +1,11 @@
+{
+    "name": "derpy",
+    "version": "0.0.1",
+    "title": "Derpy",
+    "author": "Kizrak",
+    "contact": "",
+    "homepage": "TODO",
+    "factorio_version": "0.17",
+    "dependencies": ["base >= 0.17.66"],
+    "description": "TODO"
+}
