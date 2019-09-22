@@ -38,37 +38,6 @@ data:extend{derpyArtilleryShellRecipe}
 local derpyArtilleryProjectile = table.deepcopy(data.raw["artillery-projectile"]["artillery-projectile"])
 
 derpyArtilleryProjectile.name = "derpy-artillery-projectile"
---[[
-local target_effects = derpyArtilleryProjectile.action.action_delivery.target_effects
-log(serpent.block(target_effects))
-
-local happy = 0
-
-log("for k,v in pairs(target_effects) do")
-log(#target_effects)
-for index,target_effect in pairs(target_effects) do
-	if target_effect['action'] and target_effect['type']=="nested-result" then
-		local action = target_effect['action']
-		action.radius = 15
-		local physical_only_target_effect_damage = {
-			damage = {
-				amount=14,
-				type = "physical"
-			},
-			type="damage"
-		}
-		action.action_delivery.target_effects = physical_only_target_effect_damage
-		log(serpent.block(action))
-		happy = 1 + happy
-	end
-end
-
-if happy~=1 then
-	error("not happy")
-end
-]]--
-
-
 
 derpyArtilleryProjectile.action.action_delivery.target_effects = {
 	{
@@ -104,7 +73,7 @@ derpyArtilleryProjectile.action.action_delivery.target_effects = {
 				},
 				type = "instant"
 			},
-			radius = 3,
+			radius = 3, -- spawners are 5 by 5, so radius 2.5 would never hit anything other than spawner
 			type = "area"
 		},
 		type = "nested-result"
