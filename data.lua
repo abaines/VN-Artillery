@@ -16,16 +16,56 @@ end
 
 
 
+local derpyArtilleryAmmo = table.deepcopy(data.raw["ammo"]["artillery-shell"])
+
+derpyArtilleryAmmo.name = "derpy-artillery-ammo"
+--derpyArtilleryAmmo.ammo_type.action.action_delivery.projectile="derpy-artillery-projectile"
+
+data:extend{derpyArtilleryAmmo}
+log(serpent.block(derpyArtilleryAmmo))
+
+
+local derpyArtilleryShellRecipe = table.deepcopy(data.raw.recipe["artillery-shell"])
+
+derpyArtilleryShellRecipe.name = "derpy-artillery-ammo"
+derpyArtilleryShellRecipe.result = "derpy-artillery-ammo"
+
+data:extend{derpyArtilleryShellRecipe}
+
+
+--[[
+local derpyArtilleryProjectile = table.deepcopy(data.raw["artillery-projectile"]["artillery-projectile"])
+
+derpyArtilleryProjectile.name = "derpy-artillery-projectile"
+--local action = derpyArtilleryProjectile.action.action_delivery.target_effects.action
+local action = derpyArtilleryProjectile.action
+action.action_delivery.target_effects = {
+	{
+		type = "damage",
+		damage = {amount = 5 , type = "physical"}
+	},
+	{
+		type = "damage",
+		damage = {amount = 5 , type = "explosion"}
+	}
+}
+action.radius = 50
+
+data:extend{derpyArtilleryProjectile}
+log(serpent.block(action))
+]]--
+
 local derpyArtilleryGun = table.deepcopy(data.raw["gun"]["artillery-wagon-cannon"])
 
 derpyArtilleryGun.name = "derpy-artillery-gun"
 derpyArtilleryGun.flags = {}
 
 local attack_parameters = derpyArtilleryGun.attack_parameters
-attack_parameters.cooldown = 90
+attack_parameters.cooldown = 200
 attack_parameters.min_range = 3 * 32
 attack_parameters.range = 14 * 32
 attack_parameters.turn_range = 1.0 / 3.0
+attack_parameters.ammo_category = "artillery-shell"
 
 data:extend{derpyArtilleryGun}
 
@@ -36,7 +76,7 @@ derpyArtilleryEntity.name = "derpy-artillery"
 derpyArtilleryEntity.order = "b[turret]-d[artillery-turret]"
 derpyArtilleryEntity.minable = {mining_time = 6, result = "derpy-artillery"}
 derpyArtilleryEntity.turret_rotation_speed = 0.0001
-derpyArtilleryEntity.turn_after_shooting_cooldown = 90
+derpyArtilleryEntity.turn_after_shooting_cooldown = 200
 derpyArtilleryEntity.gun = "derpy-artillery-gun"
 
 
@@ -62,10 +102,16 @@ data:extend{derpyArtilleryRecipe}
 
 local military2 = data.raw.technology["military-2"]
 
-local unlock = {
+local unlock1 = {
 	type = "unlock-recipe",
 	recipe = "derpy-artillery"
 }
 
-table.insert(military2.effects,unlock)
+local unlock2 = {
+	type = "unlock-recipe",
+	recipe = "derpy-artillery-ammo"
+}
+
+table.insert(military2.effects,unlock1)
+table.insert(military2.effects,unlock2)
 
