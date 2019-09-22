@@ -20,6 +20,9 @@ local derpyArtilleryGun = table.deepcopy(data.raw["gun"]["artillery-wagon-cannon
 
 derpyArtilleryGun.name = "derpy-artillery-gun"
 derpyArtilleryGun.flags = {}
+derpyArtilleryGun.attack_parameters.cooldown = 4
+derpyArtilleryGun.attack_parameters.min_range = 3 * 32
+derpyArtilleryGun.attack_parameters.range = 14 * 32
 
 data:extend{derpyArtilleryGun}
 
@@ -31,6 +34,8 @@ derpyArtilleryEntity.order = "b[turret]-d[artillery-turret]"
 derpyArtilleryEntity.minable = {mining_time = 6, result = "derpy-artillery"}
 derpyArtilleryEntity.turret_rotation_speed = 0.0001
 derpyArtilleryEntity.turn_after_shooting_cooldown = 60*8
+derpyArtilleryEntity.gun = "derpy-artillery-gun"
+
 
 data:extend{derpyArtilleryEntity}
 
