@@ -92,10 +92,7 @@ derpyArtilleryProjectile.action.action_delivery.target_effects = {
 		entity_name = "big-artillery-explosion",
 		type = "create-entity"
 	},
-	{
-		scale = 0.25,
-		type = "show-explosion-on-chart"
-	}
+--	{ scale = 0.25, type = "show-explosion-on-chart" }
 }
 
 data:extend{derpyArtilleryProjectile}
