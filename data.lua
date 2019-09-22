@@ -38,8 +38,9 @@ data:extend{derpyArtilleryShellRecipe}
 local derpyArtilleryProjectile = table.deepcopy(data.raw["artillery-projectile"]["artillery-projectile"])
 
 derpyArtilleryProjectile.name = "derpy-artillery-projectile"
-
+--[[
 local target_effects = derpyArtilleryProjectile.action.action_delivery.target_effects
+log(serpent.block(target_effects))
 
 local happy = 0
 
@@ -65,6 +66,77 @@ end
 if happy~=1 then
 	error("not happy")
 end
+]]--
+
+
+
+derpyArtilleryProjectile.action.action_delivery.target_effects = {
+	{
+		action = {
+			action_delivery = {
+				target_effects = {
+					{
+						damage = {
+							amount = 14,
+							type = "explosion"
+						},
+						type = "damage"
+					}
+				},
+				type = "instant"
+			},
+			radius = 15,
+			type = "area"
+		},
+		type = "nested-result"
+	},
+	{
+		action = {
+			action_delivery = {
+				target_effects = {
+					{
+						damage = {
+							amount = 12,
+							type = "physical"
+						},
+						type = "damage"
+					},
+				},
+				type = "instant"
+			},
+			radius = 5,
+			type = "area"
+		},
+		type = "nested-result"
+	},
+	{
+		initial_height = 0,
+		max_radius = 3.5,
+		offset_deviation = {
+		{
+		-4,
+		-4
+		},
+		{
+		4,
+		4
+		}
+		},
+		repeat_count = 240,
+		smoke_name = "artillery-smoke",
+		speed_from_center = 0.05,
+		speed_from_center_deviation = 0.005,
+		type = "create-trivial-smoke"
+	},
+	{
+		entity_name = "big-artillery-explosion",
+		type = "create-entity"
+	},
+	{
+		scale = 0.25,
+		type = "show-explosion-on-chart"
+	}
+}
 
 data:extend{derpyArtilleryProjectile}
 
