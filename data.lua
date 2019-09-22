@@ -48,10 +48,15 @@ log(#target_effects)
 for index,target_effect in pairs(target_effects) do
 	if target_effect['action'] and target_effect['type']=="nested-result" then
 		local action = target_effect['action']
-		action.radius = 12
-		for _,target_effect_damage in pairs(action.action_delivery.target_effects) do
-			target_effect_damage.damage.amount = 2
-		end
+		action.radius = 15
+		local physical_only_target_effect_damage = {
+			damage = {
+				amount=14,
+				type = "physical"
+			},
+			type="damage"
+		}
+		action.action_delivery.target_effects = physical_only_target_effect_damage
 		log(serpent.block(action))
 		happy = 1 + happy
 	end
