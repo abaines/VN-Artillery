@@ -77,15 +77,15 @@ derpyArtilleryProjectile.action.action_delivery.target_effects = {
 				target_effects = {
 					{
 						damage = {
-							amount = 14,
-							type = "explosion"
+							amount = 8, -- 9 two-shots small biters
+							type = "impact"
 						},
 						type = "damage"
 					}
 				},
 				type = "instant"
 			},
-			radius = 15,
+			radius = 8,
 			type = "area"
 		},
 		type = "nested-result"
@@ -104,7 +104,7 @@ derpyArtilleryProjectile.action.action_delivery.target_effects = {
 				},
 				type = "instant"
 			},
-			radius = 5,
+			radius = 3,
 			type = "area"
 		},
 		type = "nested-result"
@@ -112,16 +112,7 @@ derpyArtilleryProjectile.action.action_delivery.target_effects = {
 	{
 		initial_height = 0,
 		max_radius = 3.5,
-		offset_deviation = {
-		{
-		-4,
-		-4
-		},
-		{
-		4,
-		4
-		}
-		},
+		offset_deviation = { { -4, -4 }, { 4, 4 } },
 		repeat_count = 240,
 		smoke_name = "artillery-smoke",
 		speed_from_center = 0.05,
