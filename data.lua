@@ -22,7 +22,9 @@ local derpyArtilleryEntity = table.deepcopy(data.raw["artillery-turret"]["artill
 
 derpyArtilleryEntity.name = "derpy-artillery"
 derpyArtilleryEntity.order = "b[turret]-d[artillery-turret]"
-derpyArtilleryEntity.minable = {mining_time = 6, result = "derpy-artillery"},
+derpyArtilleryEntity.minable = {mining_time = 6, result = "derpy-artillery"}
+derpyArtilleryEntity.turret_rotation_speed = 0.0001
+derpyArtilleryEntity.turn_after_shooting_cooldown = 60*8
 
 data:extend{derpyArtilleryEntity}
 
