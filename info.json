@@ -1,11 +1,11 @@
 {
-    "name": "derpy",
+    "name": "lightArtillery",
     "version": "0.0.1",
-    "title": "Derpy",
+    "title": "Light Artillery",
     "author": "Kizrak",
     "contact": "",
-    "homepage": "TODO",
+    "homepage": "https://github.com/abaines/vn-artillery",
     "factorio_version": "0.17",
     "dependencies": ["base >= 0.17.66"],
-    "description": "TODO"
+    "description": "Early game Light Artillery"
 }
