@@ -33,8 +33,10 @@ derpyArtilleryShellRecipe.name = "derpy-artillery-ammo"
 derpyArtilleryShellRecipe.result = "derpy-artillery-ammo"
 derpyArtilleryShellRecipe.ingredients = {
 	{"steel-plate", 1},
-	{"water-barrel", 1}
+	{"water-barrel", 1},
+	{"coal", 5},
 }
+derpyArtilleryShellRecipe.energy_required = 20
 
 data:extend{derpyArtilleryShellRecipe}
 
