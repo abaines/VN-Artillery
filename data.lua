@@ -31,6 +31,10 @@ local derpyArtilleryShellRecipe = table.deepcopy(data.raw.recipe["artillery-shel
 
 derpyArtilleryShellRecipe.name = "derpy-artillery-ammo"
 derpyArtilleryShellRecipe.result = "derpy-artillery-ammo"
+derpyArtilleryShellRecipe.ingredients = {
+	{"steel-plate", 1},
+	{"water-barrel", 1}
+}
 
 data:extend{derpyArtilleryShellRecipe}
 
@@ -124,6 +128,9 @@ derpyArtilleryEntity.minable = {mining_time = 6, result = "derpy-artillery"}
 derpyArtilleryEntity.turret_rotation_speed = 0.0001
 derpyArtilleryEntity.turn_after_shooting_cooldown = 200
 derpyArtilleryEntity.gun = "derpy-artillery-gun"
+derpyArtilleryEntity.ammo_stack_limit = 30
+derpyArtilleryEntity.automated_ammo_count = 10
+derpyArtilleryEntity.max_health = 500
 
 data:extend{derpyArtilleryEntity}
 
@@ -134,12 +141,10 @@ local derpyArtilleryItem = table.deepcopy(data.raw["item"]["artillery-turret"])
 derpyArtilleryItem.name = "derpy-artillery"
 derpyArtilleryItem.place_result = "derpy-artillery"
 derpyArtilleryItem.stack_size = 1
-derpyArtilleryItem.ammo_stack_limit = 20
-derpyArtilleryItem.automated_ammo_count = 10
-derpyArtilleryItem.max_health = 500
 
 data:extend{derpyArtilleryItem}
 
+---------------------------------------------------------------------------------------------------
 
 local derpyArtilleryRecipe = table.deepcopy(data.raw.recipe["artillery-turret"])
 
