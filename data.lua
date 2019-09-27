@@ -2,18 +2,6 @@
 
 --data.lua
 
-log("derpy data.lua")
-
-for k,v in pairs(data.raw) do
-	log(k)
-end
-
-log("derpy data.lua artillery-turret")
-
-for k,v in pairs(data.raw["artillery-turret"]) do
-	log(k)
-end
-
 ---------------------------------------------------------------------------------------------------
 
 local derpyArtilleryAmmo = table.deepcopy(data.raw["ammo"]["artillery-shell"])
@@ -23,7 +11,6 @@ derpyArtilleryAmmo.ammo_type.action.action_delivery.projectile="derpy-artillery-
 derpyArtilleryAmmo.stack_size = 20
 
 data:extend{derpyArtilleryAmmo}
-log(serpent.block(derpyArtilleryAmmo))
 
 ---------------------------------------------------------------------------------------------------
 
