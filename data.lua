@@ -176,7 +176,6 @@ table.insert(lightArtilleryResearch.effects,unlock2)
 table.insert(lightArtilleryResearch.prerequisites,"fluid-handling")
 
 data:extend{lightArtilleryResearch}
-log(serpent.block(lightArtilleryResearch))
 
 
 ---------------------------------------------------------------------------------------------------
