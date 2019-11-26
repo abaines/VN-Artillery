@@ -188,3 +188,16 @@ table.insert(artilleryResearch.prerequisites,"utility-science-pack")
 table.insert(artilleryResearch.prerequisites,"explosives")
 table.insert(artilleryResearch.prerequisites, "automobilism")
 
+
+
+---------------------------------------------------------------------------------------------------
+-- Grey Belt --- Grey Belt --- Grey Belt --- Grey Belt --- Grey Belt --- Grey Belt --- Grey Belt --
+---------------------------------------------------------------------------------------------------
+
+
+
+local greybelt = table.deepcopy(data.raw.item["transport-belt"])
+greybelt.name = "weak-transport-belt"
+
+data:extend{greybelt}
+
