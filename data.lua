@@ -196,8 +196,18 @@ table.insert(artilleryResearch.prerequisites, "automobilism")
 
 
 
-local greybelt = table.deepcopy(data.raw.item["transport-belt"])
-greybelt.name = "weak-transport-belt"
+local grey_belt_item = table.deepcopy(data.raw.item["transport-belt"])
+grey_belt_item.name = "crash-transport-belt-item"
+grey_belt_item.place_result = "crash-transport-belt-entity"
 
-data:extend{greybelt}
+log(serpent.block( grey_belt_item ))
+
+local grey_belt_entity = table.deepcopy(data.raw["transport-belt"]["transport-belt"])
+grey_belt_entity.name = "crash-transport-belt-entity"
+grey_belt_entity.speed = 0.03125 / 2
+
+log(serpent.block( grey_belt_entity ))
+
+data:extend{grey_belt_item}
+data:extend{grey_belt_entity}
 
