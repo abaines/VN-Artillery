@@ -204,7 +204,7 @@ log(serpent.block( grey_belt_item ))
 
 local grey_belt_entity = table.deepcopy(data.raw["transport-belt"]["transport-belt"])
 grey_belt_entity.name = "crash-transport-belt-entity"
-grey_belt_entity.speed = 0.03125 / 2
+grey_belt_entity.speed = 7.5 * (0.03125 / 15) -- 7.5 items per second
 
 log(serpent.block( grey_belt_entity ))
 
