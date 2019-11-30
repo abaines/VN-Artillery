@@ -226,6 +226,8 @@ local animation_set = grey_belt_entity.belt_animation_set.animation_set
 animation_set.filename = pathReplace(animation_set.filename)
 animation_set.hr_version.filename = pathReplace(animation_set.hr_version.filename)
 
+-- TODO: corpse
+
 log ( "grey_belt_entity" )
 log(serpent.block( grey_belt_entity ))
 
