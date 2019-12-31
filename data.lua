@@ -23,6 +23,7 @@ derpyArtilleryShellRecipe.ingredients = {
 	{"water-barrel", 1},
 	{"coal", 5},
 }
+derpyArtilleryShellRecipe.category = "advanced-crafting"
 derpyArtilleryShellRecipe.energy_required = 20
 
 data:extend{derpyArtilleryShellRecipe}
