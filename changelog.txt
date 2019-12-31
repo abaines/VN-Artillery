@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.6
+Date: 2019.12.31
+  Changes:
+    - Update crafting category to "advanced-crafting"
+    - Update info.json
+    - Update README.md
+    - Remove dead code
+---------------------------------------------------------------------------------------------------
 Version: 0.1.5
 Date: 2019.12.11
   Changes:
