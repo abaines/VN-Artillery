@@ -1,11 +1,11 @@
 {
     "name": "lightArtillery",
-    "version": "0.2.7",
+    "version": "0.2.8",
     "title": "Light Artillery",
     "author": "Kizrak",
     "contact": "",
     "homepage": "https://github.com/abaines/VN-Artillery",
-    "factorio_version": "0.18",
+    "factorio_version": "0.17",
     "dependencies": ["base >= 0.17.79"],
     "description": "Early game Light Artillery"
 }
