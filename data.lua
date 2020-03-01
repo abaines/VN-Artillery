@@ -187,5 +187,5 @@ table.insert(artilleryResearch.prerequisites,"derpy-artillery")
 table.insert(artilleryResearch.prerequisites,"military-3")
 table.insert(artilleryResearch.prerequisites,"utility-science-pack")
 table.insert(artilleryResearch.prerequisites,"explosives")
-table.insert(artilleryResearch.prerequisites, "automobilism")
+table.insert(artilleryResearch.prerequisites,"automobilism")
 
