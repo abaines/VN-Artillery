@@ -83,7 +83,8 @@ local derpyClusterArtilleryProjectile =
           projectile = "cluster-artillery-pellet",
           direction_deviation = 0.6,
           starting_speed = 0.25,
-          starting_speed_deviation = 0.3
+          starting_speed_deviation = 0.3,
+		  max_range = 20,
         }
       }
     },
