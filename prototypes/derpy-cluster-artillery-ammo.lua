@@ -31,6 +31,68 @@ derpyArtilleryShellRecipe.energy_required = 20
 data:extend{derpyArtilleryShellRecipe}
 
 ---------------------------------------------------------------------------------------------------
+local derpyClusterArtilleryProjectile = 
+{
+    type = "projectile",
+    name = "cluster-projectile",
+    flags = {"not-on-map"},
+    acceleration = 0.005,
+    action =
+    {
+      {
+        type = "direct",
+        action_delivery =
+        {
+          type = "instant",
+          target_effects =
+          {
+            {
+              type = "create-entity",
+              entity_name = "grenade-explosion"
+            },
+            {
+              type = "create-entity",
+              entity_name = "small-scorchmark-tintable",
+              check_buildability = true
+            },
+          }
+        }
+      },
+      {
+        type = "cluster",
+        cluster_count = 17,
+        distance = 10,
+        distance_deviation = 15,
+        action_delivery =
+        {
+          type = "projectile",
+          projectile = "grenade",
+          direction_deviation = 0.6,
+          starting_speed = 0.25,
+          starting_speed_deviation = 0.3
+        }
+      }
+    },
+    light = {intensity = 0.5, size = 4},
+    animation =
+    {
+      filename = "__base__/graphics/entity/cluster-grenade/cluster-grenade.png",
+      frame_count = 1,
+      width = 24,
+      height = 24,
+      priority = "high"
+    },
+    shadow =
+    {
+      filename = "__base__/graphics/entity/grenade/grenade-shadow.png",
+      frame_count = 1,
+      width = 24,
+      height = 24,
+      priority = "high"
+    }
+}
+data:extend{derpyClusterArtilleryProjectile}
+---------------------------------------------------------------------------------------------------
 
 -- thing that flies through air and does damage
 local derpyArtilleryProjectile = table.deepcopy(data.raw["artillery-projectile"]["artillery-projectile"])
@@ -46,7 +108,7 @@ derpyArtilleryProjectile.action = {
         action_delivery =
         {
             type = "projectile",
-            projectile = "cluster-grenade", -- grenade
+            projectile = "cluster-projectile", -- not grenade
             direction_deviation = 0.6,
             starting_speed = 0.25,
             starting_speed_deviation = 0.3,
