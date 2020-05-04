@@ -50,11 +50,20 @@ local derpyClusterArtilleryProjectile =
               type = "create-entity",
               entity_name = "grenade-explosion"
             },
-            {
-              type = "create-entity",
-              entity_name = "small-scorchmark-tintable",
-              check_buildability = true
+			{
+              type = "invoke-tile-trigger",
+              repeat_count = 1,
             },
+            {
+              type = "destroy-decoratives",
+              from_render_layer = "decorative",
+              to_render_layer = "object",
+              include_soft_decoratives = true, -- soft decoratives are decoratives with grows_through_rail_path = true
+              include_decals = false,
+              invoke_decorative_trigger = true,
+              decoratives_with_trigger_only = false, -- if true, destroys only decoratives that have trigger_effect set
+              radius = 2.25 -- large radius for demostrative purposes
+            }
           }
         }
       },
@@ -102,39 +111,6 @@ local derpyClusterArtilleryGrenade =
     action =
     {
       {
-        type = "direct",
-        action_delivery =
-        {
-          type = "instant",
-          target_effects =
-          {
-            {
-              type = "create-entity",
-              entity_name = "grenade-explosion"
-            },
-            {
-              type = "create-entity",
-              entity_name = "small-scorchmark-tintable",
-              check_buildability = true
-            },
-            {
-              type = "invoke-tile-trigger",
-              repeat_count = 1,
-            },
-            {
-              type = "destroy-decoratives",
-              from_render_layer = "decorative",
-              to_render_layer = "object",
-              include_soft_decoratives = true, -- soft decoratives are decoratives with grows_through_rail_path = true
-              include_decals = false,
-              invoke_decorative_trigger = true,
-              decoratives_with_trigger_only = false, -- if true, destroys only decoratives that have trigger_effect set
-              radius = 2.25 -- large radius for demostrative purposes
-            }
-          }
-        }
-      },
-      {
         type = "area",
         radius = 6.5,
         action_delivery =
@@ -157,10 +133,10 @@ local derpyClusterArtilleryGrenade =
     light = {intensity = 0.5, size = 4},
     animation =
     {
-      filename = "__base__/graphics/entity/grenade/grenade.png",
+      filename = "__base__/graphics/entity/bullet/bullet.png",
       frame_count = 1,
-      width = 24,
-      height = 24,
+      width = 3,
+      height = 50,
       priority = "high"
     },
     shadow =
