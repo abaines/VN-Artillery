@@ -60,7 +60,7 @@ local derpyClusterArtilleryProjectile =
       },
       {
         type = "cluster",
-        cluster_count = 17,
+        cluster_count = 11,
         distance = 10,
         distance_deviation = 15,
         action_delivery =
@@ -144,7 +144,7 @@ local derpyClusterArtilleryGrenade =
           {
             {
               type = "damage",
-              damage = {amount = 5, type = "explosion"}
+              damage = {amount = 1, type = "impact"}
             },
             {
               type = "create-entity",
@@ -183,7 +183,7 @@ derpyArtilleryProjectile.name = "derpy-cluster-artillery-projectile"
 derpyArtilleryProjectile.action = {
 	{
         type = "cluster",
-        cluster_count = 17,
+        cluster_count = 11,
         distance = 10,
         distance_deviation = 15,
         action_delivery =
