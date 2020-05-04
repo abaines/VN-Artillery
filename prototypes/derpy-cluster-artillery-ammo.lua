@@ -31,7 +31,8 @@ derpyArtilleryShellRecipe.energy_required = 20
 data:extend{derpyArtilleryShellRecipe}
 
 ---------------------------------------------------------------------------------------------------
-local derpyClusterArtilleryProjectile = 
+
+local derpyClusterArtilleryProjectile =
 {
     type = "projectile",
     name = "cluster-projectile",
@@ -104,9 +105,12 @@ local derpyClusterArtilleryProjectile =
       scale = 0.5
     },
 }
+
 data:extend{derpyClusterArtilleryProjectile}
+
 ---------------------------------------------------------------------------------------------------
-local derpyClusterArtilleryPellet = 
+
+local derpyClusterArtilleryPellet =
 {
     type = "projectile",
     name = "cluster-artillery-pellet",
@@ -147,7 +151,9 @@ local derpyClusterArtilleryPellet =
       priority = "high"
     },
 }
+
 data:extend{derpyClusterArtilleryPellet}
+
 ---------------------------------------------------------------------------------------------------
 
 -- thing that flies through air and does damage
