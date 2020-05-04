@@ -37,26 +37,38 @@ local derpyArtilleryProjectile = table.deepcopy(data.raw["artillery-projectile"]
 
 derpyArtilleryProjectile.name = "derpy-cluster-artillery-projectile"
 
-derpyArtilleryProjectile.action.action_delivery.target_effects = {
+derpyArtilleryProjectile.action = {
 	{
-		type = "create-entity",
-		entity_name = "cluster-grenade",
-	},
-	{
-		initial_height = 0,
-		max_radius = 3.5,
-		offset_deviation = { { -4, -4 }, { 4, 4 } },
-		repeat_count = 240,
-		smoke_name = "artillery-smoke",
-		speed_from_center = 0.05,
-		speed_from_center_deviation = 0.005,
-		type = "create-trivial-smoke"
-	},
-	{
-		entity_name = "big-artillery-explosion",
-		type = "create-entity"
-	},
---	{ scale = 0.25, type = "show-explosion-on-chart" }
+        type = "cluster",
+        cluster_count = 7,
+        distance = 10,
+        distance_deviation = 15,
+        action_delivery =
+        {
+            type = "projectile",
+            projectile = "cluster-grenade", -- grenade
+            direction_deviation = 0.6,
+            starting_speed = 0.25,
+            starting_speed_deviation = 0.3,
+			target_effects = {
+				{
+					initial_height = 0,
+					max_radius = 3.5,
+					offset_deviation = { { -4, -4 }, { 4, 4 } },
+					repeat_count = 240,
+					smoke_name = "artillery-smoke",
+					speed_from_center = 0.05,
+					speed_from_center_deviation = 0.005,
+					type = "create-trivial-smoke"
+				},
+				{
+					entity_name = "big-artillery-explosion",
+					type = "create-entity"
+				},
+			--	{ scale = 0.25, type = "show-explosion-on-chart" }
+			}
+		}
+    }
 }
 
 data:extend{derpyArtilleryProjectile}
