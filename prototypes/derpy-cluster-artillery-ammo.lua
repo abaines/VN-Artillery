@@ -8,7 +8,7 @@
 local derpyArtilleryAmmo = table.deepcopy(data.raw["ammo"]["artillery-shell"])
 
 derpyArtilleryAmmo.name = "derpy-cluster-artillery-ammo"
-derpyArtilleryAmmo.ammo_type.action.action_delivery.projectile="derpy-artillery-projectile"
+derpyArtilleryAmmo.ammo_type.action.action_delivery.projectile="derpy-cluster-artillery-projectile"
 derpyArtilleryAmmo.stack_size = 20
 
 data:extend{derpyArtilleryAmmo}
@@ -39,42 +39,8 @@ derpyArtilleryProjectile.name = "derpy-cluster-artillery-projectile"
 
 derpyArtilleryProjectile.action.action_delivery.target_effects = {
 	{
-		action = {
-			action_delivery = {
-				target_effects = {
-					{
-						damage = {
-							amount = 8, -- 9 two-shots small biters
-							type = "impact"
-						},
-						type = "damage"
-					}
-				},
-				type = "instant"
-			},
-			radius = 8,
-			type = "area"
-		},
-		type = "nested-result"
-	},
-	{
-		action = {
-			action_delivery = {
-				target_effects = {
-					{
-						damage = {
-							amount = 12,
-							type = "physical"
-						},
-						type = "damage"
-					},
-				},
-				type = "instant"
-			},
-			radius = 3, -- spawners are 5 by 5, so radius 2.5 would never hit anything other than spawner
-			type = "area"
-		},
-		type = "nested-result"
+		type = "create-entity",
+		entity_name = "cluster-grenade",
 	},
 	{
 		initial_height = 0,
