@@ -51,6 +51,11 @@ local derpyClusterArtilleryProjectile =
               entity_name = "grenade-explosion"
             },
 			{
+			  type = "create-entity",
+			  entity_name = "big-scorchmark",
+			  check_buildability = true,
+			},
+			{
               type = "invoke-tile-trigger",
               repeat_count = 1,
             },
@@ -75,7 +80,7 @@ local derpyClusterArtilleryProjectile =
         action_delivery =
         {
           type = "projectile",
-          projectile = "artillery-grenade",
+          projectile = "cluster-artillery-pellet",
           direction_deviation = 0.6,
           starting_speed = 0.25,
           starting_speed_deviation = 0.3
@@ -83,30 +88,31 @@ local derpyClusterArtilleryProjectile =
       }
     },
     light = {intensity = 0.5, size = 4},
-    animation =
+	animation =
     {
-      filename = "__base__/graphics/entity/cluster-grenade/cluster-grenade.png",
-      frame_count = 1,
-      width = 24,
-      height = 24,
-      priority = "high"
+      filename = "__base__/graphics/entity/artillery-projectile/hr-shell.png",
+      width = 64,
+      height = 64,
+      scale = 0.5
     },
     shadow =
     {
-      filename = "__base__/graphics/entity/grenade/grenade-shadow.png",
-      frame_count = 1,
-      width = 24,
-      height = 24,
-      priority = "high"
-    }
+      filename = "__base__/graphics/entity/artillery-projectile/hr-shell-shadow.png",
+      width = 64,
+      height = 64,
+      scale = 0.5
+    },
 }
 data:extend{derpyClusterArtilleryProjectile}
 ---------------------------------------------------------------------------------------------------
-local derpyClusterArtilleryGrenade = 
+local derpyClusterArtilleryPellet = 
 {
     type = "projectile",
-    name = "artillery-grenade",
+    name = "cluster-artillery-pellet",
+	collision_box = {{-0.6, -2.2}, {0.6, 2.2}},
+	direction_only = true,
     flags = {"not-on-map"},
+	piercing_damage = 14,
     acceleration = 0.005,
     action =
     {
@@ -139,16 +145,8 @@ local derpyClusterArtilleryGrenade =
       height = 50,
       priority = "high"
     },
-    shadow =
-    {
-      filename = "__base__/graphics/entity/grenade/grenade-shadow.png",
-      frame_count = 1,
-      width = 24,
-      height = 24,
-      priority = "high"
-    }
 }
-data:extend{derpyClusterArtilleryGrenade}
+data:extend{derpyClusterArtilleryPellet}
 ---------------------------------------------------------------------------------------------------
 
 -- thing that flies through air and does damage
