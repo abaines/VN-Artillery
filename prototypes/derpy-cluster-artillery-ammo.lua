@@ -25,7 +25,7 @@ data:extend{derpyArtilleryShellRecipe}
 local derpyArtilleryAmmo = table.deepcopy(data.raw["ammo"]["artillery-shell"])
 
 derpyArtilleryAmmo.name = "derpy-cluster-artillery-ammo"
-derpyArtilleryAmmo.ammo_type.action.action_delivery.projectile="derpy-cluster-artillery-projectile"
+derpyArtilleryAmmo.ammo_type.action.action_delivery.projectile="derpy-cluster-artillery-projectile-1"
 derpyArtilleryAmmo.stack_size = 20
 
 data:extend{derpyArtilleryAmmo}
@@ -35,7 +35,7 @@ data:extend{derpyArtilleryAmmo}
 -- thing that flies through air and does damage
 local derpyArtilleryProjectile = table.deepcopy(data.raw["artillery-projectile"]["artillery-projectile"])
 
-derpyArtilleryProjectile.name = "derpy-cluster-artillery-projectile"
+derpyArtilleryProjectile.name = "derpy-cluster-artillery-projectile-1"
 
 derpyArtilleryProjectile.action = {
    {
@@ -46,7 +46,7 @@ derpyArtilleryProjectile.action = {
       action_delivery =
       {
          type = "projectile",
-         projectile = "cluster-projectile", -- not grenade
+         projectile = "cluster-projectile-2", -- not grenade
          direction_deviation = 0.6,
          starting_speed = 0.25,
          starting_speed_deviation = 0.3,
@@ -78,7 +78,7 @@ data:extend{derpyArtilleryProjectile}
 local derpyClusterArtilleryProjectile =
    {
       type = "projectile",
-      name = "cluster-projectile",
+      name = "cluster-projectile-2",
       flags = {"not-on-map"},
       acceleration = 0.005,
       action =
@@ -124,7 +124,7 @@ local derpyClusterArtilleryProjectile =
             action_delivery =
             {
                type = "projectile",
-               projectile = "cluster-artillery-pellet",
+               projectile = "cluster-artillery-pellet-3",
                direction_deviation = 0.6,
                starting_speed = 0.25,
                starting_speed_deviation = 0.3,
@@ -156,7 +156,7 @@ data:extend{derpyClusterArtilleryProjectile}
 local derpyClusterArtilleryPellet =
    {
       type = "projectile",
-      name = "cluster-artillery-pellet",
+      name = "cluster-artillery-pellet-3",
       collision_box = {{-0.6, -2.2}, {0.6, 2.2}},
       direction_only = true,
       flags = {"not-on-map"},
