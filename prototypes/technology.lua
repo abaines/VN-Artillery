@@ -25,7 +25,10 @@ local unlock2 = {
 table.insert(lightArtilleryResearch.effects,unlock1)
 table.insert(lightArtilleryResearch.effects,unlock2)
 
-table.insert(lightArtilleryResearch.prerequisites,"fluid-handling")
+lightArtilleryResearch.prerequisites = {
+	"fluid-handling",
+	"military-2",
+}
 
 data:extend{lightArtilleryResearch}
 
