@@ -39,7 +39,14 @@ local derpyArtilleryProjectile = table.deepcopy(data.raw["artillery-projectile"]
 
 derpyArtilleryProjectile.name = "derpy-cluster-artillery-projectile-1"
 
-derpyArtilleryProjectile.final_action = nil
+local target_effects = derpyArtilleryProjectile.final_action.action_delivery.target_effects
+
+target_effects[2].repeat_count = 11
+
+table.insert(target_effects,{
+	entity_name = "big-artillery-explosion",
+	type = "create-entity"
+})
 
 derpyArtilleryProjectile.action = {
    {
@@ -58,9 +65,18 @@ derpyArtilleryProjectile.action = {
    },
 	{
 		type = "area",
-		radius = 30,
-		entity_flags = { "hidden", },
-		-- TODO show_in_tooltip ?
+		radius = 2.5,
+		action_delivery =
+		{
+			type = "instant",
+			target_effects =
+			{
+				{
+					type = "damage",
+					damage = {amount = 35, type = "explosion"}
+				}
+			}
+		}
 	}
 }
 
@@ -126,7 +142,7 @@ local derpyClusterArtilleryPellet =
       {
          {
             type = "area",
-            radius = 6.5,
+            radius = 2.5,
             action_delivery =
             {
                type = "instant",
@@ -134,14 +150,12 @@ local derpyClusterArtilleryPellet =
                {
                   {
                      type = "damage",
-                     damage = {amount = 1, type = "impact"}
+                     damage = {amount = 6, type = "impact"}
                   },
-						--[[
                   {
                      type = "create-entity",
                      entity_name = "explosion"
                   }
-						]]--
                }
             }
          }
