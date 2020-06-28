@@ -64,6 +64,7 @@ derpyArtilleryProjectile.action = {
 	}
 }
 
+log(sb( derpyArtilleryProjectile ))
 data:extend{derpyArtilleryProjectile}
 
 ---------------------------------------------------------------------------------------------------
@@ -109,6 +110,7 @@ local derpyClusterArtilleryProjectile =
       },
    }
 
+log(sb( derpyClusterArtilleryProjectile ))
 data:extend{derpyClusterArtilleryProjectile}
 
 ---------------------------------------------------------------------------------------------------
@@ -155,6 +157,7 @@ local derpyClusterArtilleryPellet =
       },
    }
 
+log(sb( derpyClusterArtilleryPellet ))
 data:extend{derpyClusterArtilleryPellet}
 
 ---------------------------------------------------------------------------------------------------
