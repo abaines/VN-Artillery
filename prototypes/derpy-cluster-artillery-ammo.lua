@@ -56,6 +56,12 @@ derpyArtilleryProjectile.action = {
          starting_speed_deviation = 0.3,
       }
    },
+	{
+		type = "area",
+		radius = 30,
+		entity_flags = { "hidden", },
+		-- TODO show_in_tooltip ?
+	}
 }
 
 data:extend{derpyArtilleryProjectile}
@@ -111,10 +117,8 @@ local derpyClusterArtilleryPellet =
    {
       type = "projectile",
       name = "cluster-artillery-pellet-3",
-      collision_box = {{-0.6, -2.2}, {0.6, 2.2}},
       direction_only = true,
       flags = {"not-on-map"},
-      piercing_damage = 14,
       acceleration = 0.005,
       action =
       {
