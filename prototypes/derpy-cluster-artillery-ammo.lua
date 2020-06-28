@@ -6,6 +6,25 @@ local sb = serpent.block -- luacheck: ignore 211
 
 ---------------------------------------------------------------------------------------------------
 
+local clusterResearch = table.deepcopy(data.raw.technology["military-4"])
+
+log(sb( clusterResearch.effects ))
+
+clusterResearch.name = "derpy-cluster-artillery-research"
+clusterResearch.prerequisites = {"military-4"}
+
+--clusterResearch.effects = {
+--	recipe = "derpy-cluster-artillery-ammo",
+--	type = "unlock-recipe"
+--}
+
+clusterResearch.icon = "__lightArtillery__/graphics/cluster-ammo.png"
+
+log(sb( clusterResearch ))
+data:extend{clusterResearch}
+
+---------------------------------------------------------------------------------------------------
+
 -- the recicpe to craft the item
 local derpyArtilleryShellRecipe = table.deepcopy(data.raw.recipe["artillery-shell"])
 
