@@ -32,7 +32,7 @@ local derpyArtilleryShellRecipe = table.deepcopy(data.raw.recipe["artillery-shel
 derpyArtilleryShellRecipe.name = "derpy-cluster-artillery-ammo"
 derpyArtilleryShellRecipe.result = "derpy-cluster-artillery-ammo"
 derpyArtilleryShellRecipe.ingredients = {
-   {"derpy-artillery-ammo", 12},
+   {"derpy-artillery-ammo", 6},
    {"advanced-circuit", 1},
    {"explosives", 1},
    {type="fluid", name="lubricant", amount=5}
