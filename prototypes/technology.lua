@@ -9,6 +9,7 @@ local lightArtilleryResearch = table.deepcopy(data.raw.technology["military-2"])
 lightArtilleryResearch.name = "derpy-artillery"
 lightArtilleryResearch.icon = "__base__/graphics/technology/artillery.png"
 lightArtilleryResearch.unit.count = 5
+lightArtilleryResearch.unit.time = 5
 
 lightArtilleryResearch.effects = {}
 

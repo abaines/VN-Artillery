@@ -20,6 +20,9 @@ clusterResearch.prerequisites = {"military-4"}
 
 clusterResearch.icon = "__lightArtillery__/graphics/cluster-ammo.png"
 
+clusterResearch.unit.count = 5
+clusterResearch.unit.time = 5
+
 log(sb( clusterResearch ))
 data:extend{clusterResearch}
 
