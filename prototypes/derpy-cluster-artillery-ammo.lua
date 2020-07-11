@@ -21,7 +21,7 @@ clusterResearch.icon = "__lightArtillery__/graphics/cluster-ammo.png"
 clusterResearch.unit.count = 5
 clusterResearch.unit.time = 5
 
-log(sb( clusterResearch ))
+--log(sb( clusterResearch ))
 data:extend{clusterResearch}
 
 ---------------------------------------------------------------------------------------------------
@@ -122,7 +122,7 @@ derpyArtilleryProjectile.action = {
 	}
 }
 
-log(sb( derpyArtilleryProjectile ))
+--log(sb( derpyArtilleryProjectile ))
 data:extend{derpyArtilleryProjectile}
 
 ---------------------------------------------------------------------------------------------------
@@ -192,7 +192,7 @@ local derpyClusterArtilleryProjectile =
 		},
 	}
 
-log(sb( derpyClusterArtilleryProjectile ))
+--log(sb( derpyClusterArtilleryProjectile ))
 data:extend{derpyClusterArtilleryProjectile}
 
 ---------------------------------------------------------------------------------------------------
@@ -237,7 +237,7 @@ local derpyClusterArtilleryPellet =
 		},
 	}
 
-log(sb( derpyClusterArtilleryPellet ))
+--log(sb( derpyClusterArtilleryPellet ))
 data:extend{derpyClusterArtilleryPellet}
 
 ---------------------------------------------------------------------------------------------------
