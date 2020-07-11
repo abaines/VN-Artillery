@@ -9,6 +9,7 @@ local lightArtilleryResearch = table.deepcopy(data.raw.technology["military-2"])
 lightArtilleryResearch.name = "derpy-artillery"
 lightArtilleryResearch.icon = "__base__/graphics/technology/artillery.png"
 lightArtilleryResearch.unit.count = 5
+lightArtilleryResearch.unit.time = 5
 
 lightArtilleryResearch.effects = {}
 
@@ -25,7 +26,10 @@ local unlock2 = {
 table.insert(lightArtilleryResearch.effects,unlock1)
 table.insert(lightArtilleryResearch.effects,unlock2)
 
-table.insert(lightArtilleryResearch.prerequisites,"fluid-handling")
+lightArtilleryResearch.prerequisites = {
+	"fluid-handling",
+	"military-2",
+}
 
 data:extend{lightArtilleryResearch}
 
@@ -35,8 +39,4 @@ data:extend{lightArtilleryResearch}
 local artilleryResearch = data.raw.technology["artillery"]
 
 table.insert(artilleryResearch.prerequisites,"derpy-artillery")
-table.insert(artilleryResearch.prerequisites,"military-3")
-table.insert(artilleryResearch.prerequisites,"utility-science-pack")
-table.insert(artilleryResearch.prerequisites,"explosives")
-table.insert(artilleryResearch.prerequisites,"automobilism")
 

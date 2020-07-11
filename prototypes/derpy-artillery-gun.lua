@@ -51,9 +51,9 @@ local derpyArtilleryRecipe = table.deepcopy(data.raw.recipe["artillery-turret"])
 derpyArtilleryRecipe.name = "derpy-artillery"
 derpyArtilleryRecipe.result = "derpy-artillery"
 derpyArtilleryRecipe.ingredients = {
-	{"steel-plate", 60},
+	{"steel-plate", 40},
 	{"stone-brick", 60},
-	{"iron-gear-wheel", 40},
+	{"engine-unit", 20},
 	{"electronic-circuit", 60},
 	--{"water-barrel", 12},
 	{type="fluid", name="water", amount=600}
