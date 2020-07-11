@@ -62,6 +62,7 @@ derpyArtilleryProjectile.name = "derpy-cluster-artillery-projectile-1"
 
 local target_effects = derpyArtilleryProjectile.final_action.action_delivery.target_effects
 
+-- type = "invoke-tile-trigger",
 target_effects[2].repeat_count = 11
 
 table.insert(target_effects,{
@@ -95,6 +96,26 @@ derpyArtilleryProjectile.action = {
 				{
 					type = "damage",
 					damage = {amount = 35, type = "explosion"}
+				}
+			}
+		}
+	},
+	{
+		type = "direct",
+		action_delivery =
+		{
+			type = "instant",
+			target_effects =
+			{
+				{
+					type = "destroy-decoratives",
+					from_render_layer = "decorative",
+					to_render_layer = "object",
+					include_soft_decoratives = true, -- soft decoratives are decoratives with grows_through_rail_path = true
+					include_decals = false,
+					invoke_decorative_trigger = true,
+					decoratives_with_trigger_only = false, -- if true, destroys only decoratives that have trigger_effect set
+					radius = 6 -- large radius for demostrative purposes
 				}
 			}
 		}
@@ -139,6 +160,16 @@ local derpyClusterArtilleryProjectile =
 						{
 							type = "create-entity",
 							entity_name = "flying-robot-damaged-explosion"
+						},
+						{
+							type = "create-trivial-smoke",
+							smoke_name = "artillery-smoke",
+							initial_height = 0,
+							max_radius = 1,
+							offset_deviation = { { -1, -1 }, { 1, 1 } },
+							repeat_count = 9,
+							speed_from_center = 0.05,
+							speed_from_center_deviation = 0.005,
 						},
 					}
 				}
