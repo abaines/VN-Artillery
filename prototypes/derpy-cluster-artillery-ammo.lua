@@ -128,6 +128,20 @@ local derpyClusterArtilleryProjectile =
 					starting_speed_deviation = 0.3,
 					max_range = 20,
 				}
+			},
+			{
+				type = "direct",
+				action_delivery =
+				{
+					type = "instant",
+					target_effects =
+					{
+						{
+							type = "create-entity",
+							entity_name = "flying-robot-damaged-explosion"
+						},
+					}
+				}
 			}
 		},
 		light = {intensity = 0.5, size = 4},
