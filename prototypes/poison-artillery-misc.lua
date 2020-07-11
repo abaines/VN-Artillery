@@ -30,12 +30,10 @@ local technology = {
 	}
 }
 
-log(sb( technology ))
+--log(sb( technology ))
 data:extend{technology}
 
 ---------------------------------------------------------------------------------------------------
-
-log(sb( data.raw.recipe["artillery-shell"] ))
 
 local recipe = {
 	enabled = false,
@@ -50,12 +48,10 @@ local recipe = {
 	type = "recipe"
 }
 
-log(sb( recipe ))
+--log(sb( recipe ))
 data:extend{recipe}
 
 ---------------------------------------------------------------------------------------------------
-
-log(sb( data.raw["ammo"]["artillery-shell"] ))
 
 local ammo = {
 	ammo_type = {
