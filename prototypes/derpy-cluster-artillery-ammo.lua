@@ -164,9 +164,9 @@ local derpyClusterArtilleryProjectile =
 						{
 							type = "create-trivial-smoke",
 							smoke_name = "artillery-smoke",
-							initial_height = 0,
-							max_radius = 1,
-							offset_deviation = { { -1, -1 }, { 1, 1 } },
+							initial_height = 1,
+							max_radius = .1,
+							offset_deviation = { { -.1, -.1 }, { .1, .1 } },
 							repeat_count = 9,
 							speed_from_center = 0.05,
 							speed_from_center_deviation = 0.005,
