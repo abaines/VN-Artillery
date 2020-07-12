@@ -54,16 +54,16 @@ local smoke_with_trigger = {
 		flags = { "smoke" },
 		frame_count = 60,
 		height = 120,
+		width = 152,
 		line_length = 5,
 		priority = "high",
 		shift = {
-			-0.53125,
-			-0.4375
+			-15,
+			-15
 		},
-		width = 152,
-		scale = 77,
+		scale = 70,
 		apply_runtime_tint = true,
-		tint = { r = 1.0, g = 0.4, b = 0.0, a = 0.05},
+		tint = { r = 1.0, g = 0.4, b = 0.0, a = 0.0},
 	},
 	cyclic = true,
 	duration = 1200,
