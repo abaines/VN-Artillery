@@ -8,7 +8,7 @@ local sb = serpent.block -- luacheck: ignore 211
 
 local technology = {
 	effects = {{
-		recipe = "poison-capsule-artillery-shell",
+		recipe = "poison-capsule-artillery-recipe",
 		type = "unlock-recipe"
 	}},
 	icon = "__lightArtillery__/graphics/poison-ammo.png",
@@ -45,8 +45,8 @@ local recipe = {
 		{type="fluid", name="crude-oil", amount=5},
 	},
 	category = "advanced-crafting",
-	name = "poison-capsule-artillery-shell",
-	result = "poison-capsule-artillery-shell",
+	name = "poison-capsule-artillery-recipe",
+	result = "poison-capsule-artillery-ammo",
 	type = "recipe"
 }
 
@@ -77,7 +77,7 @@ local ammo = {
 	icon = "__base__/graphics/icons/artillery-shell.png",
 	icon_mipmaps = 4,
 	icon_size = 64,
-	name = "poison-capsule-artillery-shell",
+	name = "poison-capsule-artillery-ammo",
 	order = "d[explosive-cannon-shell]-d[artillery]",
 	stack_size = 20,
 	subgroup = "ammo",
