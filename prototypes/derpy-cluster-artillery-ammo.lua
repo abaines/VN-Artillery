@@ -216,7 +216,7 @@ local derpyClusterArtilleryPellet =
 					{
 						{
 							type = "damage",
-							damage = {amount = 6, type = "impact"}
+							damage = {amount = 6, type = "impact"} -- TODO: slow capsule effect
 						},
 						{
 							type = "create-entity",
