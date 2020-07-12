@@ -20,6 +20,8 @@ data:extend{artillery_projectile}
 ---------------------------------------------------------------------------------------------------
 
 local smoke_with_trigger = {
+	name = "poison-cloud-artillery-projectile-2",
+	type = "smoke-with-trigger",
 	action = {
 		action_delivery = {
 			target_effects = {
@@ -34,9 +36,7 @@ local smoke_with_trigger = {
 						},
 						type = "instant"
 					},
-					entity_flags = {
-						"breaths-air"
-					},
+					entity_flags = { "breaths-air" },
 					radius = 77,
 					type = "area"
 				},
@@ -51,9 +51,7 @@ local smoke_with_trigger = {
 	animation = {
 		animation_speed = 0.25,
 		filename = "__base__/graphics/entity/smoke/smoke.png",
-		flags = {
-			"smoke"
-		},
+		flags = { "smoke" },
 		frame_count = 60,
 		height = 120,
 		line_length = 5,
@@ -64,29 +62,13 @@ local smoke_with_trigger = {
 		},
 		width = 152
 	},
-	color = {
-		a = 0.05,
-		b = 0,
-		g = 0.5,
-		r = 0.9
-	},
+	color = { r = 1.0, g = 0.4, b = 0.0, },
 	cyclic = true,
 	duration = 1200,
 	fade_away_duration = 120,
-	flags = {
-		"not-on-map"
-	},
-	name = "poison-cloud-artillery-projectile-2",
-	particle_count = 1,
-	particle_duration_variation = 180,
-	particle_spread = {
-		3.7800000000000002,
-		2.2680000000000002
-	},
+	flags = { "not-on-map" },
 	render_layer = "object",
 	show_when_smoke_off = true,
-	spread_duration = 20,
-	type = "smoke-with-trigger",
 	working_sound = {
 		fade_in_ticks = 4,
 		fade_out_ticks = 20,
