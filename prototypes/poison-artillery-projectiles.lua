@@ -19,68 +19,84 @@ data:extend{artillery_projectile}
 
 ---------------------------------------------------------------------------------------------------
 
-local smoke_with_trigger = table.deepcopy( data.raw["smoke-with-trigger"]["poison-cloud"] )
-
-smoke_with_trigger.name = "poison-cloud-artillery-projectile-2"
-
-smoke_with_trigger.color = {
-	r = 0.9,
-	g = 0.5,
-	b = 0.0,
-	a = 0.05,
-}
-
-for _,created_effect in pairs(smoke_with_trigger.created_effect) do
-	created_effect.action_delivery.target_effects.entity_name = "poison-cloud--artillery-visual-dummy-3"
-	created_effect.distance = 7*created_effect.distance
-	created_effect.distance_deviation = nil
-end
-
-smoke_with_trigger.created_effect[1].cluster_count = 4
-smoke_with_trigger.created_effect[2]=nil
-
-smoke_with_trigger.created_effect = nil
-
-smoke_with_trigger.action = {
-	action_delivery = {
-		target_effects = {
-			action = {
-				action_delivery = {
-					target_effects = {
-						damage = {
-							amount = 1,
-							type = "poison"
+local smoke_with_trigger = {
+	action = {
+		action_delivery = {
+			target_effects = {
+				action = {
+					action_delivery = {
+						target_effects = {
+							damage = {
+								amount = 1,
+								type = "poison"
+							},
+							type = "damage"
 						},
-						type = "damage"
+						type = "instant"
 					},
-					type = "instant"
+					entity_flags = {
+						"breaths-air"
+					},
+					radius = 77,
+					type = "area"
 				},
-				entity_flags = {
-					"breaths-air"
-				},
-				radius = 11*7,
-				type = "area"
+				type = "nested-result"
 			},
-			type = "nested-result"
+			type = "instant"
 		},
-		type = "instant"
+		type = "direct"
 	},
-	type = "direct"
+	action_cooldown = 90,
+	affected_by_wind = false,
+	animation = {
+		animation_speed = 0.25,
+		filename = "__base__/graphics/entity/smoke/smoke.png",
+		flags = {
+			"smoke"
+		},
+		frame_count = 60,
+		height = 120,
+		line_length = 5,
+		priority = "high",
+		shift = {
+			-0.53125,
+			-0.4375
+		},
+		width = 152
+	},
+	color = {
+		a = 0.05,
+		b = 0,
+		g = 0.5,
+		r = 0.9
+	},
+	cyclic = true,
+	duration = 1200,
+	fade_away_duration = 120,
+	flags = {
+		"not-on-map"
+	},
+	name = "poison-cloud-artillery-projectile-2",
+	particle_count = 1,
+	particle_duration_variation = 180,
+	particle_spread = {
+		3.7800000000000002,
+		2.2680000000000002
+	},
+	render_layer = "object",
+	show_when_smoke_off = true,
+	spread_duration = 20,
+	type = "smoke-with-trigger",
+	working_sound = {
+		fade_in_ticks = 4,
+		fade_out_ticks = 20,
+		max_sounds_per_type = 3,
+		sound = {
+			filename = "__base__/sound/fight/poison-cloud.ogg",
+			volume = 0.7
+		}
+	}
 }
-
-smoke_with_trigger.action_cooldown = 90
-smoke_with_trigger.particle_count = 1
-
-smoke_with_trigger.wave_speed = nil
-smoke_with_trigger.wave_distance = nil
-
-smoke_with_trigger.particle_spread = { 3.6 * 1.05, 3.6 * 0.6 * 1.05 }
-
-smoke_with_trigger.particle_scale_factor = nil
-
-smoke_with_trigger.particle_distance_scale_factor = nil
-
-smoke_with_trigger.spread_duration_variation = nil
 
 log("smoke-with-trigger:\n" .. sb( smoke_with_trigger ))
 data:extend{smoke_with_trigger}
