@@ -69,15 +69,16 @@ smoke_with_trigger.action = {
 }
 
 smoke_with_trigger.action_cooldown = 90
-smoke_with_trigger.particle_count = 255
+smoke_with_trigger.particle_count = 1
 
 smoke_with_trigger.wave_speed = nil
 smoke_with_trigger.wave_distance = nil
 
-smoke_with_trigger.particle_spread = {
-	7*3.7800000000000002,
-	7*2.2680000000000002
-}
+smoke_with_trigger.particle_spread = { 3.6 * 1.05, 3.6 * 0.6 * 1.05 }
+
+smoke_with_trigger.particle_scale_factor = nil
+
+smoke_with_trigger.particle_distance_scale_factor = nil
 
 smoke_with_trigger.spread_duration_variation = nil
 
@@ -109,8 +110,8 @@ visual_dummy.particle_spread = {
 	7*2.2680000000000002
 }
 
-log("poison-cloud-visual-dummy:\n" .. sb( visual_dummy ))
-data:extend{visual_dummy}
+--log("poison-cloud-visual-dummy:\n" .. sb( visual_dummy ))
+--data:extend{visual_dummy}
 
 ---------------------------------------------------------------------------------------------------
 
