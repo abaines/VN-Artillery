@@ -9,7 +9,10 @@ local sb = serpent.block -- luacheck: ignore 211
 local clusterResearch = table.deepcopy(data.raw.technology["military-4"])
 
 clusterResearch.name = "derpy-cluster-artillery-research"
-clusterResearch.prerequisites = {"military-4","derpy-artillery"}
+clusterResearch.prerequisites = {
+	"military-4",
+	"poison-capsule-artillery-research",
+}
 
 clusterResearch.effects = {{
 	recipe = "derpy-cluster-artillery-ammo",
@@ -32,9 +35,9 @@ local derpyArtilleryShellRecipe = table.deepcopy(data.raw.recipe["artillery-shel
 derpyArtilleryShellRecipe.name = "derpy-cluster-artillery-ammo"
 derpyArtilleryShellRecipe.result = "derpy-cluster-artillery-ammo"
 derpyArtilleryShellRecipe.ingredients = {
-	{"derpy-artillery-ammo", 6},
-	{"advanced-circuit", 1},
-	{"explosives", 1},
+	{"derpy-artillery-ammo", 1},
+	{"slowdown-capsule", 1},
+	{"cluster-grenade", 1},
 	{type="fluid", name="lubricant", amount=5}
 }
 derpyArtilleryShellRecipe.category = "advanced-crafting"

@@ -38,5 +38,5 @@ data:extend{lightArtilleryResearch}
 -- modify existing technology to require new technology
 local artilleryResearch = data.raw.technology["artillery"]
 
-table.insert(artilleryResearch.prerequisites,"derpy-artillery")
+table.insert(artilleryResearch.prerequisites,"derpy-cluster-artillery-research")
 

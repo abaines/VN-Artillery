@@ -38,12 +38,13 @@ data:extend{technology}
 
 local recipe = {
 	enabled = false,
-	energy_required = 15,
+	energy_required = 20,
 	ingredients = {
-		{"explosive-cannon-shell",4},
-		{"radar",1},
-		{"explosives",8},
+		{"derpy-artillery-ammo",1},
+		{"poison-capsule",1},
+		{type="fluid", name="crude-oil", amount=5},
 	},
+	category = "advanced-crafting",
 	name = "poison-capsule-artillery-shell",
 	result = "poison-capsule-artillery-shell",
 	type = "recipe"
