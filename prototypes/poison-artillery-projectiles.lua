@@ -14,7 +14,7 @@ artillery_projectile.action = table.deepcopy( data.raw["projectile"]["poison-cap
 
 artillery_projectile.action[1].action_delivery.target_effects[1].entity_name = "poison-cloud-artillery-projectile-2"
 
-log("artillery-projectile:\n" .. sb( artillery_projectile ))
+--log("artillery-projectile:\n" .. sb( artillery_projectile ))
 data:extend{artillery_projectile}
 
 ---------------------------------------------------------------------------------------------------
@@ -33,8 +33,13 @@ smoke_with_trigger.color = {
 for _,created_effect in pairs(smoke_with_trigger.created_effect) do
 	created_effect.action_delivery.target_effects.entity_name = "poison-cloud--artillery-visual-dummy-3"
 	created_effect.distance = 7*created_effect.distance
-	created_effect.distance_deviation = 7*created_effect.distance_deviation
+	created_effect.distance_deviation = nil
 end
+
+smoke_with_trigger.created_effect[1].cluster_count = 4
+smoke_with_trigger.created_effect[2]=nil
+
+smoke_with_trigger.created_effect = nil
 
 smoke_with_trigger.action = {
 	action_delivery = {
@@ -64,6 +69,17 @@ smoke_with_trigger.action = {
 }
 
 smoke_with_trigger.action_cooldown = 90
+smoke_with_trigger.particle_count = 255
+
+smoke_with_trigger.wave_speed = nil
+smoke_with_trigger.wave_distance = nil
+
+smoke_with_trigger.particle_spread = {
+	7*3.7800000000000002,
+	7*2.2680000000000002
+}
+
+smoke_with_trigger.spread_duration_variation = nil
 
 log("smoke-with-trigger:\n" .. sb( smoke_with_trigger ))
 data:extend{smoke_with_trigger}
@@ -81,7 +97,12 @@ visual_dummy.color = {
 	a = 0.05,
 }
 
-visual_dummy.animation.scale = 5
+visual_dummy.animation.scale = 1
+
+visual_dummy.particle_count = 2
+
+visual_dummy.animation.spread_duration_variation = nil
+visual_dummy.animation.particle_duration_variation = nil
 
 visual_dummy.particle_spread = {
 	7*3.7800000000000002,
