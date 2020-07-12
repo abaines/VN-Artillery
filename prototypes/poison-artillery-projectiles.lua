@@ -30,10 +30,11 @@ smoke_with_trigger.color = {
 	a = 0.05,
 }
 
-for i,o in pairs(smoke_with_trigger.created_effect) do
-	o.action_delivery.target_effects.entity_name = "poison-cloud--artillery-visual-dummy-3"
+for _,created_effect in pairs(smoke_with_trigger.created_effect) do
+	created_effect.action_delivery.target_effects.entity_name = "poison-cloud--artillery-visual-dummy-3"
+	created_effect.distance = 7*created_effect.distance
+	created_effect.distance_deviation = 7*created_effect.distance_deviation
 end
-
 
 smoke_with_trigger.action = {
 	action_delivery = {
@@ -80,11 +81,11 @@ visual_dummy.color = {
 	a = 0.05,
 }
 
-visual_dummy.animation.scale = .5
+visual_dummy.animation.scale = 5
 
 visual_dummy.particle_spread = {
-	4*3.7800000000000002,
-	4*2.2680000000000002
+	7*3.7800000000000002,
+	7*2.2680000000000002
 }
 
 log("poison-cloud-visual-dummy:\n" .. sb( visual_dummy ))
