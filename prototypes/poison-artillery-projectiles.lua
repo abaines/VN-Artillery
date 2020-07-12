@@ -52,7 +52,7 @@ smoke_with_trigger.action = {
 				entity_flags = {
 					"breaths-air"
 				},
-				radius = 31,
+				radius = 11*7,
 				type = "area"
 			},
 			type = "nested-result"
@@ -61,6 +61,8 @@ smoke_with_trigger.action = {
 	},
 	type = "direct"
 }
+
+smoke_with_trigger.action_cooldown = 90
 
 log("smoke-with-trigger:\n" .. sb( smoke_with_trigger ))
 data:extend{smoke_with_trigger}
@@ -76,6 +78,13 @@ visual_dummy.color = {
 	g = 0.5,
 	b = 0.0,
 	a = 0.05,
+}
+
+visual_dummy.animation.scale = .5
+
+visual_dummy.particle_spread = {
+	4*3.7800000000000002,
+	4*2.2680000000000002
 }
 
 log("poison-cloud-visual-dummy:\n" .. sb( visual_dummy ))
