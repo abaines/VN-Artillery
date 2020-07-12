@@ -15,7 +15,8 @@ local technology = {
 	icon_size = 128,
 	name = "poison-capsule-artillery-research",
 	prerequisites = {
-		"military-3"
+		"military-3",
+		"derpy-artillery"
 	},
 	type = "technology",
 	unit = {
@@ -82,7 +83,7 @@ local ammo = {
 	type = "ammo"
 }
 
-log("ammo:\n" .. sb( ammo ))
+--log("ammo:\n" .. sb( ammo ))
 data:extend{ammo}
 
 ---------------------------------------------------------------------------------------------------
