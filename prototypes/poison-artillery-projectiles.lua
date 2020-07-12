@@ -10,10 +10,9 @@ local artillery_projectile = table.deepcopy( data.raw["artillery-projectile"]["a
 
 artillery_projectile.name = "poison-capsule-artillery-projectile-1"
 
-local poison_capsule_action = table.deepcopy( data.raw["projectile"]["poison-capsule"].action )
+artillery_projectile.action = table.deepcopy( data.raw["projectile"]["poison-capsule"].action )
 
-artillery_projectile.action = poison_capsule_action
-artillery_projectile.action[1].action_delivery.target_effects[1].entity_name = "poison-cloud-artillery-projectile-2",
+artillery_projectile.action[1].action_delivery.target_effects[1].entity_name = "poison-cloud-artillery-projectile-2"
 
 log("artillery-projectile:\n" .. sb( artillery_projectile ))
 data:extend{artillery_projectile}
@@ -31,7 +30,7 @@ smoke_with_trigger.action = {
 				action_delivery = {
 					target_effects = {
 						damage = {
-							amount = 8,
+							amount = 1,
 							type = "poison"
 						},
 						type = "damage"
@@ -41,7 +40,7 @@ smoke_with_trigger.action = {
 				entity_flags = {
 					"breaths-air"
 				},
-				radius = 11,
+				radius = 31,
 				type = "area"
 			},
 			type = "nested-result"
@@ -50,6 +49,8 @@ smoke_with_trigger.action = {
 	},
 	type = "direct"
 }
+
+smoke_with_trigger.action_cooldown = 20
 
 log("smoke-with-trigger:\n" .. sb( smoke_with_trigger ))
 data:extend{smoke_with_trigger}
