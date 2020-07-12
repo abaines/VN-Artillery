@@ -82,36 +82,57 @@ local smoke_with_trigger = {
 	}
 }
 
+smoke_with_trigger.created_effect = {
+	{
+		action_delivery = {
+			target_effects = {
+				entity_name = "poison-cloud--artillery-visual-dummy-3",
+				initial_height = 0,
+				show_in_tooltip = false,
+				type = "create-smoke"
+			},
+			type = "instant"
+		},
+		cluster_count = 12,
+		distance = 77,
+		type = "cluster"
+	},
+}
+
 log("smoke-with-trigger:\n" .. sb( smoke_with_trigger ))
 data:extend{smoke_with_trigger}
 
 ---------------------------------------------------------------------------------------------------
 
-local visual_dummy = table.deepcopy( data.raw["smoke-with-trigger"]["poison-cloud-visual-dummy"] )
-
-visual_dummy.name = "poison-cloud--artillery-visual-dummy-3"
-
-visual_dummy.color = {
-	r = 0.9,
-	g = 0.5,
-	b = 0.0,
-	a = 0.05,
+local visual_dummy = {
+	name = "poison-cloud--artillery-visual-dummy-3",
+	type = "smoke-with-trigger",
+	affected_by_wind = false,
+	animation = {
+		animation_speed = 0.25,
+		filename = "__base__/graphics/entity/smoke/smoke.png",
+		flags = { "smoke" },
+		frame_count = 60,
+		height = 120, width = 152,
+		line_length = 5,
+		priority = "high",
+		scale = 1,
+		shift = {
+			-0.53125,
+			-0.4375
+		},
+	},
+	color = { r = 0.9, g = 0.5, b = 0, },
+	cyclic = true,
+	duration = 1440,
+	fade_away_duration = 180,
+	flags = { "not-on-map" },
+	render_layer = "higher-object-above",
+	show_when_smoke_off = true,
 }
 
-visual_dummy.animation.scale = 1
-
-visual_dummy.particle_count = 2
-
-visual_dummy.animation.spread_duration_variation = nil
-visual_dummy.animation.particle_duration_variation = nil
-
-visual_dummy.particle_spread = {
-	7*3.7800000000000002,
-	7*2.2680000000000002
-}
-
---log("poison-cloud-visual-dummy:\n" .. sb( visual_dummy ))
---data:extend{visual_dummy}
+log("poison-cloud-visual-dummy:\n" .. sb( visual_dummy ))
+data:extend{visual_dummy}
 
 ---------------------------------------------------------------------------------------------------
 
