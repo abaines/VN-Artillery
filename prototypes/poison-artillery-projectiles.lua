@@ -14,8 +14,7 @@ artillery_projectile.action = table.deepcopy( data.raw["projectile"]["poison-cap
 
 artillery_projectile.action[1].action_delivery.target_effects[1].entity_name = "poison-cloud-artillery-projectile-2"
 
---log("artillery-projectile:\n" .. sb( artillery_projectile ))
-local action2 = {
+local agro_ping_damage_action = {
 	action_delivery = {
 		target_effects = {
 			action = {
@@ -40,8 +39,9 @@ local action2 = {
 	type = "direct"
 }
 
-table.insert(artillery_projectile.action,action2)
+table.insert(artillery_projectile.action,agro_ping_damage_action)
 
+log("artillery-projectile:\n" .. sb( artillery_projectile ))
 data:extend{artillery_projectile}
 
 ---------------------------------------------------------------------------------------------------
