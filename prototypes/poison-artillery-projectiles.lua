@@ -23,6 +23,18 @@ local smoke_with_trigger = table.deepcopy( data.raw["smoke-with-trigger"]["poiso
 
 smoke_with_trigger.name = "poison-cloud-artillery-projectile-2"
 
+smoke_with_trigger.color = {
+	r = 0.9,
+	g = 0.5,
+	b = 0.0,
+	a = 0.05,
+}
+
+for i,o in pairs(smoke_with_trigger.created_effect) do
+	o.action_delivery.target_effects.entity_name = "poison-cloud--artillery-visual-dummy-3"
+end
+
+
 smoke_with_trigger.action = {
 	action_delivery = {
 		target_effects = {
@@ -50,10 +62,24 @@ smoke_with_trigger.action = {
 	type = "direct"
 }
 
-smoke_with_trigger.action_cooldown = 20
-
 log("smoke-with-trigger:\n" .. sb( smoke_with_trigger ))
 data:extend{smoke_with_trigger}
+
+---------------------------------------------------------------------------------------------------
+
+local visual_dummy = table.deepcopy( data.raw["smoke-with-trigger"]["poison-cloud-visual-dummy"] )
+
+visual_dummy.name = "poison-cloud--artillery-visual-dummy-3"
+
+visual_dummy.color = {
+	r = 0.9,
+	g = 0.5,
+	b = 0.0,
+	a = 0.05,
+}
+
+log("poison-cloud-visual-dummy:\n" .. sb( visual_dummy ))
+data:extend{visual_dummy}
 
 ---------------------------------------------------------------------------------------------------
 
