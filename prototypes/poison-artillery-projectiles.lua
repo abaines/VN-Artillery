@@ -11,15 +11,15 @@ local artillery_projectile = table.deepcopy( data.raw["artillery-projectile"]["a
 artillery_projectile.action = {}
 artillery_projectile.final_action = {}
 
-log(sb( artillery_projectile ))
+log("artillery-projectile:\n" .. sb( artillery_projectile ))
 
 ---------------------------------------------------------------------------------------------------
 
-log(sb( data.raw["capsule"]["poison-capsule"] ))
+log("capsule:\n" .. sb( data.raw["capsule"]["poison-capsule"] ))
 
-log(sb( data.raw["projectile"]["poison-capsule"] ))
+log("projectile:\n" .. sb( data.raw["projectile"]["poison-capsule"] ))
 
-log(sb( data.raw["smoke-with-trigger"]["poison-cloud"] ))
+log("smoke-with-trigger:\n" .. sb( data.raw["smoke-with-trigger"]["poison-cloud"] ))
 
 ---------------------------------------------------------------------------------------------------
 
