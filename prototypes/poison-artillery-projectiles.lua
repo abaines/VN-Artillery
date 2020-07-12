@@ -60,14 +60,18 @@ local smoke_with_trigger = {
 			-0.53125,
 			-0.4375
 		},
-		width = 152
+		width = 152,
+		scale = 25,
+		apply_runtime_tint = true,
+		tint = { r = 1.0, g = 0.4, b = 0.0, a = 1/255},
+		blend_mode = "additive-soft",
 	},
 	color = { r = 1.0, g = 0.4, b = 0.0, },
 	cyclic = true,
 	duration = 1200,
 	fade_away_duration = 120,
 	flags = { "not-on-map" },
-	render_layer = "object",
+	render_layer = "higher-object-under",
 	show_when_smoke_off = true,
 	working_sound = {
 		fade_in_ticks = 4,
