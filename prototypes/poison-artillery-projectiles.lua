@@ -15,6 +15,33 @@ artillery_projectile.action = table.deepcopy( data.raw["projectile"]["poison-cap
 artillery_projectile.action[1].action_delivery.target_effects[1].entity_name = "poison-cloud-artillery-projectile-2"
 
 --log("artillery-projectile:\n" .. sb( artillery_projectile ))
+local action2 = {
+	action_delivery = {
+		target_effects = {
+			action = {
+				action_delivery = {
+					target_effects = {
+						damage = {
+							amount = 1,
+							type = "poison"
+						},
+						type = "damage"
+					},
+					type = "instant"
+				},
+				entity_flags = { "breaths-air" },
+				radius = 77,
+				type = "area"
+			},
+			type = "nested-result"
+		},
+		type = "instant"
+	},
+	type = "direct"
+}
+
+table.insert(artillery_projectile.action,action2)
+
 data:extend{artillery_projectile}
 
 ---------------------------------------------------------------------------------------------------
@@ -66,7 +93,7 @@ local smoke_with_trigger = {
 		tint = { r = 1.0, g = 0.4, b = 0.0, a = 0.0},
 	},
 	cyclic = true,
-	duration = 1200,
+	duration = 90*14, -- ~14 ticks over ~24 seconds
 	fade_away_duration = 120,
 	flags = { "not-on-map" },
 	render_layer = "higher-object-under",
