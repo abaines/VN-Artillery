@@ -24,6 +24,7 @@ derpyArtilleryShellRecipe.ingredients = {
 	{"steel-plate", 1},
 	{"water-barrel", 1},
 	{"coal", 5},
+	{type="fluid", name="steam", amount=5},
 }
 derpyArtilleryShellRecipe.category = "advanced-crafting"
 derpyArtilleryShellRecipe.energy_required = 20
