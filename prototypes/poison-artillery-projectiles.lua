@@ -151,7 +151,7 @@ local visual_dummy = {
 	},
 	color = { r = 0.9, g = 0.5, b = 0, },
 	cyclic = true,
-	duration = 1440,
+	duration = 1260,
 	fade_away_duration = 180,
 	flags = { "not-on-map" },
 	render_layer = "higher-object-above",
