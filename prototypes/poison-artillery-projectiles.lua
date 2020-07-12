@@ -10,10 +10,12 @@ local artillery_projectile = table.deepcopy( data.raw["artillery-projectile"]["a
 
 artillery_projectile.name = "poison-capsule-artillery-projectile-1"
 
-log("action:\n" .. sb( artillery_projectile.action ))
-log("final_action:\n" .. sb( artillery_projectile.final_action ))
+--log("action:\n" .. sb( artillery_projectile.action ))
+artillery_projectile.action = data.raw["projectile"]["poison-capsule"].action
 
-artillery_projectile.action = nil
+local final_action = artillery_projectile.final_action
+
+--log("final_action:\n" .. sb( final_action ))
 
 log("artillery-projectile:\n" .. sb( artillery_projectile ))
 data:extend{artillery_projectile}
