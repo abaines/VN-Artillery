@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.14
+Date: 2020-07-12
+  Changes:
+    - Add Orange Poison Cloud Artillery Ammo
+    - Add 5 'steam' requirement to Light Artillery Ammo recipe
+    - Cleanup technology prerequisites
+    - Redesign BLU-3 PineAPple Shell recipe to take slowdown capsule (WIP: shell does not apply slow effect yet)
+    - Russian-language localization - Thanks TheLastEagle!
+---------------------------------------------------------------------------------------------------
 Version: 0.4.13
 Date: 2020-07-11
   Changes:
