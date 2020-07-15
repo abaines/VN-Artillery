@@ -175,6 +175,20 @@ local derpyClusterArtilleryPellet =
 						}
 					}
 				}
+			},
+			{
+				type = "area",
+				radius = 2.5,
+				force = "enemy",
+				action_delivery =
+				{
+					type = "instant",
+					target_effects =
+					{
+						type = "create-sticker",
+						sticker = "cluster-artillery-slowdown-sticker-4"
+					}
+				}
 			}
 		},
 		light = {intensity = 0.5, size = 4},
@@ -190,6 +204,19 @@ local derpyClusterArtilleryPellet =
 
 --log(sb( derpyClusterArtilleryPellet ))
 data:extend{derpyClusterArtilleryPellet}
+
+---------------------------------------------------------------------------------------------------
+
+local sticker = {
+	name = "cluster-artillery-slowdown-sticker-4",
+	type = "sticker",
+	flags = {},
+	animation = table.deepcopy( data.raw["sticker"]["slowdown-sticker"].animation ),
+	duration_in_ticks = 3 * 60 * 60, -- yep, 3 minutes !
+	target_movement_modifier = 0.50,
+}
+
+data:extend{sticker}
 
 ---------------------------------------------------------------------------------------------------
 
