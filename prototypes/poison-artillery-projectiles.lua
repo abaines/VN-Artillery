@@ -41,7 +41,7 @@ local agro_ping_damage_action = {
 
 table.insert(artillery_projectile.action,agro_ping_damage_action)
 
-log("artillery-projectile:\n" .. sb( artillery_projectile ))
+--log("artillery-projectile:\n" .. sb( artillery_projectile ))
 data:extend{artillery_projectile}
 
 ---------------------------------------------------------------------------------------------------
@@ -126,7 +126,7 @@ smoke_with_trigger.created_effect = {
 	},
 }
 
-log("smoke-with-trigger:\n" .. sb( smoke_with_trigger ))
+--log("smoke-with-trigger:\n" .. sb( smoke_with_trigger ))
 data:extend{smoke_with_trigger}
 
 ---------------------------------------------------------------------------------------------------
@@ -158,7 +158,7 @@ local visual_dummy = {
 	show_when_smoke_off = true,
 }
 
-log("poison-cloud-visual-dummy:\n" .. sb( visual_dummy ))
+--log("poison-cloud-visual-dummy:\n" .. sb( visual_dummy ))
 data:extend{visual_dummy}
 
 ---------------------------------------------------------------------------------------------------
