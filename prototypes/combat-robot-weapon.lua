@@ -65,6 +65,9 @@ local defender = table.deepcopy(data.raw["combat-robot"]["defender"])
 
 defender.name = "la-defender"
 defender.follows_player = false
+defender.range_from_player = nil
+defender.speed = 0
+defender.friction = 1
 
 data:extend{defender}
 
