@@ -2,6 +2,8 @@
 
 -- data.lua
 
+require("prototypes.combat-robot-misc")
+require("prototypes.combat-robot-weapon")
 require("prototypes.derpy-artillery-ammo")
 require("prototypes.derpy-artillery-gun")
 require("prototypes.derpy-cluster-artillery-misc")

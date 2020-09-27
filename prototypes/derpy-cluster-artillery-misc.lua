@@ -53,6 +53,8 @@ local derpyArtilleryAmmo = table.deepcopy(data.raw["ammo"]["artillery-shell"])
 derpyArtilleryAmmo.name = "derpy-cluster-artillery-ammo"
 derpyArtilleryAmmo.ammo_type.action.action_delivery.projectile="derpy-cluster-artillery-projectile-1"
 derpyArtilleryAmmo.stack_size = 20
+derpyArtilleryAmmo.icon = "__lightArtillery__/graphics/icons/cluster-grenade.png"
+derpyArtilleryAmmo.icon_mipmaps = 1
 
 data:extend{derpyArtilleryAmmo}
 
