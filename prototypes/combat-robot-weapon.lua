@@ -60,6 +60,7 @@ artillery_projectile.action.action_delivery.target_effects = {
 data:extend{artillery_projectile}
 --log("artillery_projectile.action:\n"..sb(artillery_projectile.action))
 
+---------------------------------------------------------------------------------------------------
 
 local defender = table.deepcopy(data.raw["combat-robot"]["defender"])
 
