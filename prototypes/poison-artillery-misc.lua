@@ -74,8 +74,8 @@ local ammo = {
 		category = "artillery-shell",
 		target_type = "position"
 	},
-	icon = "__base__/graphics/icons/artillery-shell.png",
-	icon_mipmaps = 4,
+	icon = "__lightArtillery__/graphics/icons/poison-capsule.png",
+	icon_mipmaps = 1,
 	icon_size = 64,
 	name = "poison-capsule-artillery-ammo",
 	order = "d[explosive-cannon-shell]-d[artillery]",

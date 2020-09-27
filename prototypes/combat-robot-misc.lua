@@ -16,6 +16,8 @@ local ammo = table.deepcopy(data.raw["ammo"]["artillery-shell"])
 ammo.name = "la-combat-robot-artillery-shell"
 ammo.ammo_type.action.action_delivery.projectile="la-combat-robot-projectile-1"
 ammo.stack_size = 10
+ammo.icon = "__lightArtillery__/graphics/icons/defender.png"
+ammo.icon_mipmaps = 1
 
 data:extend{ammo}
 log("ammo:\n"..sb(ammo))

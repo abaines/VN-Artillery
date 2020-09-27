@@ -41,6 +41,8 @@ local derpyArtilleryItem = table.deepcopy(data.raw["item"]["artillery-turret"])
 derpyArtilleryItem.name = "derpy-artillery"
 derpyArtilleryItem.place_result = "derpy-artillery"
 derpyArtilleryItem.stack_size = 1
+derpyArtilleryItem.icon = "__lightArtillery__/graphics/icons/artillery-turret.png"
+derpyArtilleryItem.icon_mipmaps = 1
 
 data:extend{derpyArtilleryItem}
 
