@@ -16,7 +16,7 @@ local technology = {
 	name = "poison-capsule-artillery-research",
 	prerequisites = {
 		"military-3",
-		"derpy-artillery"
+		"la-combat-robot-artillery-shell-research"
 	},
 	type = "technology",
 	unit = {
