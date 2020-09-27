@@ -58,7 +58,7 @@ artillery_projectile.action.action_delivery.target_effects = {
 }
 
 data:extend{artillery_projectile}
-log("artillery_projectile.action:\n"..sb(artillery_projectile.action))
+--log("artillery_projectile.action:\n"..sb(artillery_projectile.action))
 
 
 local defender = table.deepcopy(data.raw["combat-robot"]["defender"])
@@ -71,4 +71,20 @@ defender.friction = 1
 
 data:extend{defender}
 
+local defenderL = table.deepcopy(defender)
+
+defenderL.destroy_action.action_delivery.source_effects = nil
+defenderL.attack_parameters.sound = nil
+
+defenderL.damaged_trigger_effect = nil
+defenderL.dying_trigger_effect = nil
+defenderL.collision_box = nil
+
+defenderL.idle = nil
+defenderL.in_motion = nil
+defenderL.shadow_idle = nil
+defenderL.shadow_in_motion = nil
+defenderL.water_reflection = nil
+
+log("defender:\n"..sb(defenderL))
 
