@@ -52,11 +52,20 @@ artillery_projectile.action.action_delivery.target_effects = {
 	{
 		type = "create-entity",
 		show_in_tooltip = true,
-		entity_name = "distractor",
+		entity_name = "la-defender",
 		offset_deviation = {{-4, -4}, {4, 4}},
 	},
 }
 
 data:extend{artillery_projectile}
-log(sb(artillery_projectile))
+log("artillery_projectile.action:\n"..sb(artillery_projectile.action))
+
+
+local defender = table.deepcopy(data.raw["combat-robot"]["defender"])
+
+defender.name = "la-defender"
+defender.follows_player = false
+
+data:extend{defender}
+
 
