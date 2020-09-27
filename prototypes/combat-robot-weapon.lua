@@ -49,6 +49,12 @@ artillery_projectile.action.action_delivery.target_effects = {
 		entity_name = "big-artillery-explosion",
 		type = "create-entity"
 	},
+	{
+		type = "create-entity",
+		show_in_tooltip = true,
+		entity_name = "distractor",
+		offset_deviation = {{-4, -4}, {4, 4}},
+	},
 }
 
 data:extend{artillery_projectile}
