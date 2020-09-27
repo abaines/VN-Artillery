@@ -20,6 +20,7 @@ ammo.stack_size = 10
 data:extend{ammo}
 log("ammo:\n"..sb(ammo))
 
+---------------------------------------------------------------------------------------------------
 
 local recipe = {
 	enabled = false,
@@ -38,4 +39,33 @@ local recipe = {
 
 data:extend{recipe}
 log("recipe:\n"..sb(recipe))
+
+---------------------------------------------------------------------------------------------------
+
+local technology = {
+	effects = {{
+		recipe = "la-combat-robot-artillery-shell-recipe",
+		type = "unlock-recipe"
+	}},
+	icon = "__lightArtillery__/graphics/defender-ammo.png",
+	icon_size = 128,
+	name = "la-combat-robot-artillery-shell-research",
+	prerequisites = {
+		"combat-robotics",
+		"derpy-artillery"
+	},
+	type = "technology",
+	unit = {
+		count = 5,
+		ingredients = {
+			{"automation-science-pack",1},
+			{"logistic-science-pack",1},
+			{"military-science-pack",1},
+		},
+		time = 5
+	}
+}
+
+data:extend{technology}
+log("technology:\n"..sb(technology))
 
