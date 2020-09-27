@@ -18,5 +18,4 @@ ammo.ammo_type.action.action_delivery.projectile="la-combat-robot-projectile-1"
 ammo.stack_size = 10
 
 data:extend{ammo}
-log(sb(ammo))
 
