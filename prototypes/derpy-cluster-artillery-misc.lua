@@ -19,6 +19,8 @@ clusterResearch.effects = {{
 	type = "unlock-recipe"
 }}
 
+clusterResearch.icon_mipmaps = 1
+clusterResearch.icon_size = 128
 clusterResearch.icon = "__lightArtillery__/graphics/cluster-ammo.png"
 
 clusterResearch.unit.count = 5

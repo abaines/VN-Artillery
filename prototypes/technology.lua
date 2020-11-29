@@ -7,6 +7,8 @@
 -- add a new research that unlocks two recicpes
 local lightArtilleryResearch = table.deepcopy(data.raw.technology["military-2"])
 lightArtilleryResearch.name = "derpy-artillery"
+lightArtilleryResearch.icon_mipmaps = 1
+lightArtilleryResearch.icon_size = 128
 lightArtilleryResearch.icon = "__lightArtillery__/graphics/light-artillery.png"
 lightArtilleryResearch.unit.count = 5
 lightArtilleryResearch.unit.time = 5
