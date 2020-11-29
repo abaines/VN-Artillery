@@ -20,7 +20,7 @@ ammo.icon = "__lightArtillery__/graphics/icons/defender.png"
 ammo.icon_mipmaps = 1
 
 data:extend{ammo}
-log("ammo:\n"..sb(ammo))
+--log("ammo:\n"..sb(ammo))
 
 ---------------------------------------------------------------------------------------------------
 
@@ -40,7 +40,7 @@ local recipe = {
 }
 
 data:extend{recipe}
-log("recipe:\n"..sb(recipe))
+--log("recipe:\n"..sb(recipe))
 
 ---------------------------------------------------------------------------------------------------
 
@@ -69,5 +69,5 @@ local technology = {
 }
 
 data:extend{technology}
-log("technology:\n"..sb(technology))
+--log("technology:\n"..sb(technology))
 

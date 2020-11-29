@@ -87,5 +87,5 @@ defenderL.shadow_idle = nil
 defenderL.shadow_in_motion = nil
 defenderL.water_reflection = nil
 
-log("defender:\n"..sb(defenderL))
+--log("defender:\n"..sb(defenderL))
 
