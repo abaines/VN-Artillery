@@ -53,7 +53,7 @@ local technology = {
 	icon_size = 128,
 	name = "la-combat-robot-artillery-shell-research",
 	prerequisites = {
-		"combat-robotics", -- defender
+		"defender", -- combat-robotics
 		"derpy-artillery"
 	},
 	type = "technology",
