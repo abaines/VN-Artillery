@@ -6,4 +6,3 @@ derpyArtilleryGun.attack_parameters.cooldown = settings.startup["derpy-artillery
 
 local derpyArtilleryEntity = data.raw["artillery-turret"]["derpy-artillery"]
 derpyArtilleryEntity.turret_rotation_speed = settings.startup["derpy-artillery-turret-rotation-speed"].value
--- derpyArtilleryEntity.turn_after_shooting_cooldown = settings.startup["derpy-artillery-cooldown"].value
