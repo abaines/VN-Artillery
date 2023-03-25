@@ -24,7 +24,7 @@ data:extend({
         type = "double-setting",
         name = "derpy-artillery-turret-rotation-speed",
         setting_type = "startup",
-        minimum_value = 0.000001,
+        minimum_value = 0.0000001,
         default_value = 0.0001,
         maximum_value = 1
     }
