@@ -26,6 +26,6 @@ data:extend({
         setting_type = "startup",
         minimum_value = 0.0000001,
         default_value = 0.0001,
-        maximum_value = 3.14159265359
+        maximum_value = 0.5
     }
 })
