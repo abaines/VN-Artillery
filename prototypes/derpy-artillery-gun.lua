@@ -51,13 +51,14 @@ data:extend{derpyArtilleryItem}
 local derpyArtilleryRecipe = table.deepcopy(data.raw.recipe["artillery-turret"])
 
 derpyArtilleryRecipe.name = "derpy-artillery"
-derpyArtilleryRecipe.result = "derpy-artillery"
+derpyArtilleryRecipe.results = {
+	{type = "item", name = "derpy-artillery", amount = 1}
+}
 derpyArtilleryRecipe.ingredients = {
-	{"steel-plate", 40},
-	{"stone-brick", 60},
-	{"engine-unit", 20},
-	{"electronic-circuit", 60},
-	--{"water-barrel", 12},
+	{type = "item", name = "steel-plate", amount = 40},
+	{type = "item", name = "stone-brick", amount = 60},
+	{type = "item", name = "engine-unit", amount = 20},
+	{type = "item", name = "electronic-circuit", amount = 60},
 	{type="fluid", name="water", amount=600}
 }
 derpyArtilleryRecipe.category = "crafting-with-fluid"

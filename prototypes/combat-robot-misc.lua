@@ -28,14 +28,16 @@ local recipe = {
 	enabled = false,
 	energy_required = 20,
 	ingredients = {
-		{"derpy-artillery-ammo",1},
-		{"defender-capsule",1},
-		{"repair-pack",1},
+		{type="item", name="derpy-artillery-ammo",amount=1},
+		{type="item", name="defender-capsule",amount=1},
+		{type="item", name="repair-pack",amount=1},
 		{type="fluid", name="water", amount=5},
 	},
 	category = "advanced-crafting",
 	name = "la-combat-robot-artillery-shell-recipe",
-	result = "la-combat-robot-artillery-shell",
+	results = {
+		{type = "item", name = "la-combat-robot-artillery-shell", amount = 1}
+	},
 	type = "recipe"
 }
 
@@ -60,9 +62,9 @@ local technology = {
 	unit = {
 		count = 5,
 		ingredients = {
-			{"automation-science-pack",1},
-			{"logistic-science-pack",1},
-			{"military-science-pack",1},
+			{type="item", name="automation-science-pack",amount=1},
+			{type="item", name="logistic-science-pack",amount=1},
+			{type="item", name="military-science-pack",amount=1},
 		},
 		time = 5
 	}

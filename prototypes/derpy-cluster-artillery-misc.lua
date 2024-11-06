@@ -35,11 +35,11 @@ data:extend{clusterResearch}
 local derpyArtilleryShellRecipe = table.deepcopy(data.raw.recipe["artillery-shell"])
 
 derpyArtilleryShellRecipe.name = "derpy-cluster-artillery-ammo"
-derpyArtilleryShellRecipe.result = "derpy-cluster-artillery-ammo"
+derpyArtilleryShellRecipe.results = {{type="item",name="derpy-cluster-artillery-ammo",amount=1}}
 derpyArtilleryShellRecipe.ingredients = {
-	{"derpy-artillery-ammo", 1},
-	{"slowdown-capsule", 1},
-	{"cluster-grenade", 1},
+	{type = "item",name="derpy-artillery-ammo",amount= 1},
+	{type = "item",name="slowdown-capsule",amount= 1},
+	{type = "item",name="cluster-grenade", amount=1},
 	{type="fluid", name="lubricant", amount=5}
 }
 derpyArtilleryShellRecipe.category = "advanced-crafting"

@@ -21,15 +21,17 @@ data:extend{derpyArtilleryAmmo}
 local derpyArtilleryShellRecipe = table.deepcopy(data.raw.recipe["artillery-shell"])
 
 derpyArtilleryShellRecipe.name = "derpy-artillery-ammo"
-derpyArtilleryShellRecipe.result = "derpy-artillery-ammo"
+derpyArtilleryShellRecipe.results = {
+	{type = "item", name = "derpy-artillery-ammo", amount = 1}
+}
 local derpyArtilleryShellFuel = "coal"
 if mods["SeaBlock"] then
 	derpyArtilleryShellFuel = "solid-fuel"
 end
 derpyArtilleryShellRecipe.ingredients = {
-	{"steel-plate", 1},
-	{"water-barrel", 1},
-	{derpyArtilleryShellFuel, 5},
+	{type="item",name="steel-plate", amount=1},
+	{type="item",name="water-barrel", amount=1},
+	{type="item",name=derpyArtilleryShellFuel, amount=5},
 	{type="fluid", name="steam", amount=5},
 }
 derpyArtilleryShellRecipe.category = "advanced-crafting"

@@ -40,13 +40,13 @@ local recipe = {
 	enabled = false,
 	energy_required = 20,
 	ingredients = {
-		{"derpy-artillery-ammo",1},
-		{"poison-capsule",1},
+		{type = "item",name="derpy-artillery-ammo",amount=1},
+		{type = "item",name="poison-capsule",amount=1},
 		{type="fluid", name="crude-oil", amount=5},
 	},
 	category = "advanced-crafting",
 	name = "poison-capsule-artillery-recipe",
-	result = "poison-capsule-artillery-ammo",
+	results = {{type="item",name="poison-capsule-artillery-ammo",amount=1}},
 	type = "recipe"
 }
 
@@ -81,7 +81,8 @@ local ammo = {
 	order = "d[explosive-cannon-shell]-d[artillery]",
 	stack_size = 20,
 	subgroup = "ammo",
-	type = "ammo"
+	type = "ammo",
+	ammo_category = "artillery-shell",
 }
 
 --log("ammo:\n" .. sb( ammo ))
