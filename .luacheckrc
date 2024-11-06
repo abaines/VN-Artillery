@@ -1,8 +1,8 @@
 std = {
-    globals = {"std","include_files"},
+    globals = {"serpent", "table_size", "settings", "game", "script", "defines", "log", "storage", "data"},
  }
 max_cyclomatic_complexity = 1
-max_line_length = 10
+max_line_length = 120
 include_files = {
     "**/*.lua",
     "*.lua",
