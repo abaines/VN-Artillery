@@ -16,3 +16,4 @@ include_files = {
     "$GITHUB_WORKSPACE/**/*.lua",
     "/home/runner/work/VN-Artillery/VN-Artillery/*.lua",
 }
+print("hello")
