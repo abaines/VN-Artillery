@@ -13,4 +13,5 @@ include_files = {
     ".luacheckrc",
     "../**/*.lua",
     "../../**/*.lua",
+    "$GITHUB_WORKSPACE/**/*.lua",
 }
