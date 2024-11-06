@@ -12,4 +12,5 @@ include_files = {
     "settings.lua",
     ".luacheckrc",
     "../**/*.lua",
+    "../../**/*.lua",
 }
