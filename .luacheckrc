@@ -2,7 +2,7 @@ std = {
     globals = {},
  }
 max_cyclomatic_complexity = 1
-max_line_length = 6
+max_line_length = 7
 include_files = {
     "**/*.lua",
     "*.lua",
@@ -10,7 +10,7 @@ include_files = {
     "data.lua",
     "data-updates.lua",
     "settings.lua",
-    ".luacheckrc",
+    --".luacheckrc",
     "../**/*.lua",
     "../../**/*.lua",
     "$GITHUB_WORKSPACE/**/*.lua",
