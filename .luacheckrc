@@ -7,4 +7,7 @@ include_files = {
     "**/*.lua",
     "*.lua",
     "prototypes/*.lua",
+    "data.lua",
+    "data-updates.lua",
+    "settings.lua",
 }
