@@ -2,7 +2,7 @@ std = {
     globals = {},
  }
 max_cyclomatic_complexity = 1
-max_line_length = 5
+max_line_length = 6
 include_files = {
     "**/*.lua",
     "*.lua",
@@ -14,4 +14,5 @@ include_files = {
     "../**/*.lua",
     "../../**/*.lua",
     "$GITHUB_WORKSPACE/**/*.lua",
+    "/home/runner/work/VN-Artillery/VN-Artillery/*.lua",
 }
