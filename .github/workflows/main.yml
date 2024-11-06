@@ -17,8 +17,8 @@ jobs:
     - uses: actions/checkout@v4
 
     - uses: lunarmodules/luacheck@v1.2.0
-      with:
-        args: .luacheckrc
+   #   with:
+    #    args: .luacheckrc
 
     - uses: actions/setup-python@v5
       with:
