@@ -10,4 +10,5 @@ include_files = {
     "data.lua",
     "data-updates.lua",
     "settings.lua",
+    ".luacheckrc",
 }

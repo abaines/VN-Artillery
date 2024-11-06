@@ -19,7 +19,6 @@ jobs:
     - uses: lunarmodules/luacheck@v1.2.0
       with:
         args: .luacheckrc
-        targets: "."
 
     - uses: actions/setup-python@v5
       with:
