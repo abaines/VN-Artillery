@@ -129,14 +129,14 @@ local derpyClusterArtilleryProjectile =
 		light = {intensity = 0.5, size = 4},
 		animation =
 		{
-			filename = "__base__/graphics/entity/artillery-projectile/hr-shell.png",
+			filename = "__base__/graphics/entity/artillery-projectile/shell.png",
 			width = 64,
 			height = 64,
 			scale = 0.5
 		},
 		shadow =
 		{
-			filename = "__base__/graphics/entity/artillery-projectile/hr-shell-shadow.png",
+			filename = "__base__/graphics/entity/artillery-projectile/shell-shadow.png",
 			width = 64,
 			height = 64,
 			scale = 0.5
