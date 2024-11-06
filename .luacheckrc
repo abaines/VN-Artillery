@@ -1,3 +1,5 @@
 std = {
-    globals = {"serpent", "table_size", "settings", "game", "script", "defines", "log", "storage"},
+    globals = {},
+    max_cyclomatic_complexity = 1,
+    max_line_length = 5,
  }
