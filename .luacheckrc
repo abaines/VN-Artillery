@@ -24,6 +24,7 @@ std = {
         "type",
     },
 }
+
 max_cyclomatic_complexity = 2
 
 print("Hello")
